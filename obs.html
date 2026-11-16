@@ -58,7 +58,8 @@
 
     :root {
       --portrait: 340px;
-      --cor-texto: rgba(255, 255, 255, 0.54);
+      --cor-texto: #ffffff; /* antes: rgba(255, 255, 255, 0.54) (branco semitransparente) */
+      --largura-numeros: 170px; /* espaço fixo dos números; os ícones de status ficam depois dele */
       --brilho-vida: #ff0000;
       --brilho-pe: #00ff00; /* PE: cor original roxa #d000ff */
       --brilho-status: #ff0000; /* brilho atrás das imagens de status */
@@ -119,6 +120,9 @@
       justify-content: center;
       gap: 40px;
       height: 100%;
+      /* Largura fixa: os números não se movem e os ícones de status sempre começam no mesmo lugar */
+      width: var(--largura-numeros);
+      flex: none;
     }
 
     .valor {
@@ -326,14 +330,6 @@
         const portrait = escolherPortrait(p);
         if (portrait) card.appendChild(criarImg(portrait, "portrait"));
 
-        // Imagem(ns) extra(s) ao lado do personagem
-        const status = document.createElement("div");
-        status.className = "status";
-        for (const url of imagensDeStatusAtivas(p)) {
-          status.appendChild(criarImg(url, "", CONFIG.tamanhoImagemStatus));
-        }
-        card.appendChild(status);
-
         const valores = document.createElement("div");
         valores.className = "valores";
         if (CONFIG.mostrarVida) {
@@ -351,6 +347,14 @@
           valores.appendChild(pe);
         }
         card.appendChild(valores);
+
+        // Imagem(ns) de status, DEPOIS dos números (não empurram vida/PE)
+        const status = document.createElement("div");
+        status.className = "status";
+        for (const url of imagensDeStatusAtivas(p)) {
+          status.appendChild(criarImg(url, "", CONFIG.tamanhoImagemStatus));
+        }
+        card.appendChild(status);
 
         grade.appendChild(card);
       }
