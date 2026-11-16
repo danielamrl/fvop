@@ -36,8 +36,10 @@
         isDisturbed: "imagens/status/sangrando.png",    // checkbox "Sangrando"    (antes: Pertubado)
         isInsane:    "imagens/status/cego.png",         // checkbox "Cego"         (antes: Enlouquecido)
       },
-      tamanhoImagemStatus: 45, // largura/altura em pixels da imagem extra (antes: 140)
-                               // Se não couberem todas na altura do card, elas encolhem sozinhas.
+      // Os ícones ficam numa "caixa de status" de tamanho fixo (ver --largura-status e
+      // --altura-status no CSS) e dividem o espaço entre si:
+      //   1 status = ocupa a caixa toda | 2 = lado a lado | 3-4 = grade 2x2 | 5 = grade 2x3
+      colunasStatus: 2, // máximo de ícones lado a lado
 
       // Trocar o portrait conforme o estado (comportamento da página antiga).
       usarPortraitsInterativos: false,
@@ -63,6 +65,9 @@
       --brilho-vida: #ff0000;
       --brilho-pe: #00ff00; /* PE: cor original roxa #d000ff */
       --brilho-status: #ff0000; /* brilho atrás das imagens de status */
+      --largura-status: 170px; /* tamanho fixo da caixa onde os ícones de status se dividem */
+      --altura-status: var(--portrait);
+      --espaco-status: 8px;    /* espaço entre os ícones */
     }
 
     html, body {
@@ -94,25 +99,28 @@
       object-fit: contain;
     }
 
+    /* Caixa de status com tamanho FIXO: os ícones se dividem dentro dela.
+       O número de colunas/linhas é definido pelo JS conforme quantos status estão ativos. */
     .status {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 6px;
-      height: 100%;
+      display: grid;
+      grid-template-columns: repeat(var(--cols, 1), 1fr);
+      grid-template-rows: repeat(var(--rows, 1), 1fr);
+      gap: var(--espaco-status);
+      width: var(--largura-status);
+      height: var(--altura-status);
       flex: none;
     }
     .status img {
-      object-fit: contain;
-      /* Garante que até 5 ícones caibam na altura do card (5 ícones + 4 espaços de 6px) */
-      flex: 0 1 auto;
+      /* Cada ícone preenche a sua célula da grade, mantendo a proporção */
+      width: 100%;
+      height: 100%;
+      min-width: 0;
       min-height: 0;
-      max-height: calc((100% - 4 * 6px) / 5);
+      object-fit: contain;
       /* Brilho que segue o contorno do PNG (mesmo efeito dos números de vida/PE).
          Para um brilho mais forte, repita ou aumente o valor em px. */
       filter: drop-shadow(0 0 10px var(--brilho-status)) drop-shadow(0 0 10px var(--brilho-status));
     }
-    .status:empty { display: none; }
 
     .valores {
       display: flex;
@@ -349,10 +357,16 @@
         card.appendChild(valores);
 
         // Imagem(ns) de status, DEPOIS dos números (não empurram vida/PE)
+        // A caixa existe sempre (mesmo vazia), para o layout nunca mudar de tamanho.
         const status = document.createElement("div");
         status.className = "status";
-        for (const url of imagensDeStatusAtivas(p)) {
-          status.appendChild(criarImg(url, "", CONFIG.tamanhoImagemStatus));
+        const ativas = imagensDeStatusAtivas(p);
+        const cols = Math.max(1, Math.min(ativas.length, CONFIG.colunasStatus));
+        const rows = Math.max(1, Math.ceil(ativas.length / cols));
+        status.style.setProperty("--cols", cols);
+        status.style.setProperty("--rows", rows);
+        for (const url of ativas) {
+          status.appendChild(criarImg(url, ""));
         }
         card.appendChild(status);
 
