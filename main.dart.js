@@ -69578,18 +69578,18 @@ b6=A.bq(A.c([A.qf(A.U(255,0,0,0),b6,new A.adc(k),new A.jN(new A.add(),B.l,1,B.m)
 b7=A.U(255,255,255,255)
 k=A.qW(A.c([b6,A.bq(A.c([A.qf(A.U(255,0,0,0),b7,new A.ade(k),new A.jN(new A.adg(),B.l,1,B.m),c5,k.z),A.aw("Enlouquecido",c5,c5,c5,A.X(c5,c5,B.e,c5,c5,c5,c5,c5,c6,c5,c5,16.666666666666668,c5,c5,c5,c5,!0,c5,c5,c5,c5,c5,A.c([],a5),c5,c5),c5,c5)],c),B.p,B.u,B.r)],c),B.p,B.a5,c5,B.cF,B.r,c5,c5,B.aU)
 b7=A.b0(c5,20,c5)
-b6=A.qW(A.c([A.aw("Pontos de Esfor\xe7o (PE)",c5,c5,c5,A.X(c5,c5,B.e,c5,c5,c5,c5,c5,c6,c5,c5,16.666666666666668,c5,c5,c5,c5,!0,c5,c5,c5,c5,c5,A.c([new A.es(0,B.dZ,A.U(255,174,0,255),B.k,7)],a5),c5,c5),c5,c5),A.bq(A.c([A.lV(B.bT,c5,A.dL(B.h4,B.e,c5),16,new A.adh(s,j,c7),new A.aq(0,0,0,0),1,c5),A.lV(B.bT,c5,A.dL(B.ej,B.e,c5),16,new A.adi(s,j,c7),new A.aq(0,0,0,0),1,c5)],c),B.p,B.u,B.r)],c),B.p,B.a5,c5,B.au,B.r,c5,c5,B.aU)
+b6=A.qW(A.c([A.aw("Pontos de Esfor\xe7o (PE)",c5,c5,c5,A.X(c5,c5,B.e,c5,c5,c5,c5,c5,c6,c5,c5,16.666666666666668,c5,c5,c5,c5,!0,c5,c5,c5,c5,c5,A.c([new A.es(0,B.dZ,A.U(255,0,200,80)/* cor original (roxo): A.U(255,174,0,255) */,B.k,7)],a5),c5,c5),c5,c5),A.bq(A.c([A.lV(B.bT,c5,A.dL(B.h4,B.e,c5),16,new A.adh(s,j,c7),new A.aq(0,0,0,0),1,c5),A.lV(B.bT,c5,A.dL(B.ej,B.e,c5),16,new A.adi(s,j,c7),new A.aq(0,0,0,0),1,c5)],c),B.p,B.u,B.r)],c),B.p,B.a5,c5,B.au,B.r,c5,c5,B.aU)
 b8=A.b0(c5,10,c5)
 b9=A.lz(A.U(52,255,255,255),1)
-c0=A.U(255,130,30,177)
-a8=A.al9(A.U(255,70,17,95),B.a5,n*100*1.05/m/100,new A.n6(c0,a8))
+c0=A.U(255,30,160,60)/* cor original (roxo): A.U(255,130,30,177) */
+a8=A.al9(A.U(255,10,60,20)/* fundo original (roxo): A.U(255,70,17,95) */,B.a5,n*100*1.05/m/100,new A.n6(c0,a8))
 c0=A.xd("https://cdn.discordapp.com/attachments/619720455049183293/993139829263048704/BARRA_ROXA.png",B.aE,1000)
 c1=A.c([new A.cu(B.l,B.k,2),new A.cu(B.l,B.k,5)],a5)
 c7=A.dz(!1,c5,!0,A.aX(c5,A.jy(B.b3,A.c([a8,c0,A.bq(A.c([A.aw(A.d(n),c5,c5,c5,A.X(c5,c5,n<=m?B.e:c4.f,c5,c5,c5,c5,c5,c6,c5,c5,22.727272727272727,c5,c5,c5,c5,!0,c5,c5,c5,c5,c5,c1,c5,c5),c5,c5),A.aw("/"+A.d(m)+" ",c5,c5,c5,A.X(c5,c5,B.e,c5,c5,c5,c5,c5,c6,c5,c5,22.727272727272727,c5,c5,c5,c5,!0,c5,c5,c5,c5,c5,A.c([new A.cu(B.l,B.k,2),new A.cu(B.l,B.k,5)],a5),c5,c5),c5,c5)],c),B.p,B.eP,B.r)],c),B.ad,B.b2),B.n,c5,c5,new A.bz(c5,c5,b9,c5,c5,c5,B.K),c5,31.88034188034188,c5,c5,c5,c5,c5,c5),c5,!0,c5,c5,c5,c5,c5,c5,c5,c5,c5,new A.adj(s,c8,j,c7),c5,c5,c5)
 s=A.b0(c5,40,c5)
 c2=J.HB(7,t.ib)
 for(j=c4.r,c3=0;c3<7;++c3)c2[c3]=j[c3]
-return A.aX(c5,A.zO(h,B.X,A.Ke(!0,A.aq8(A.hS(A.aA_(A.aX(c5,A.cq(A.c([a,e,a2,A.aX(c5,A.bq(A.c([new A.dy(2,B.ay,A.aX(c5,A.cq(A.c([new A.cP(B.z4,a4,c5),a3,A.dz(!1,c5,!0,A.cq(A.c([a6,a7,a9,b0,b3,b2,b1,b4,b5,k,b7,b6,b8,c7,s,A.hS(A.b0(A.aoW(c2,7,c5,!0),c5,400),c5,c5)],c),B.fM,B.u,B.r),c5,!0,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5)],c),B.p,B.u,B.r),B.n,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5),c5)],c),B.p,B.au,B.r),B.n,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5,a0/2),A.b0(c5,40,c5)],c),B.p,B.u,B.r),B.n,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5,a0),B.aD),c5,c5),c5,B.bZ,c5,c5,A.EM(),B.G,c5,c5,10,a1,!0,B.ct,c5),B.Z,!0),new A.Gx(b,new A.HT(d,c5,B.aD,!1,c5,!0,B.lW,!1,c5,1,B.aJ,B.uS,c5,B.ad,c5),c5),!1),B.n,c5,c5,new A.bz(i,g,c5,c5,c5,c5,B.K),c5,c5,c5,c5,c5,c5,c5,c5)}else{A.dH(c9.i(0))
+return A.aX(c5,A.zO(h,B.X,A.Ke(!0,A.aq8(A.hS(A.aA_(A.aX(c5,A.cq(A.c([a,e,a2,A.aX(c5,A.bq(A.c([new A.dy(2,B.ay,A.aX(c5,A.cq(A.c([new A.cP(B.z4,a4,c5),a3,A.dz(!1,c5,!0,A.cq(A.c([a6,a7,a9,/* CHECKBOXES DE VIDA DESATIVADAS - para reativar, descomente: b0,b3, */ /* SANIDADE DESATIVADA (barra + checkboxes) - para reativar, descomente: b2,b1,b4,b5,k, */b7,b6,b8,c7,s,A.hS(A.b0(A.aoW(c2,7,c5,!0),c5,400),c5,c5)],c),B.fM,B.u,B.r),c5,!0,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5)],c),B.p,B.u,B.r),B.n,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5),c5)],c),B.p,B.au,B.r),B.n,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5,a0/2),A.b0(c5,40,c5)],c),B.p,B.u,B.r),B.n,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5,a0),B.aD),c5,c5),c5,B.bZ,c5,c5,A.EM(),B.G,c5,c5,10,a1,!0,B.ct,c5),B.Z,!0),new A.Gx(b,new A.HT(d,c5,B.aD,!1,c5,!0,B.lW,!1,c5,1,B.aJ,B.uS,c5,B.ad,c5),c5),!1),B.n,c5,c5,new A.bz(i,g,c5,c5,c5,c5,B.K),c5,c5,c5,c5,c5,c5,c5,c5)}else{A.dH(c9.i(0))
 return new A.oc(c5)}},
 $S:443}
 A.ad3.prototype={
