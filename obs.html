@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FVOP - OBS</title>
+  <!--
+    PÁGINA DO MESTRE PARA O OBS (reescrita em HTML/JS simples)
+
+    Lê em tempo real, do Firebase, os dados que os players alteram na ficha.
+    Não altera nada no banco: só leitura.
+
+    Como usar no OBS:
+      1. Adicione uma fonte "Navegador" com a URL: https://danielamrl.github.io/fvop/obs.html
+      2. Na primeira vez, clique com o botão direito na fonte > "Interagir" e faça login
+         com o email/senha da conta de MESTRE. O login fica salvo.
+      3. Para sair/trocar de conta, abra obs.html?sair
+
+    Para personalizar, edite o bloco CONFIG logo abaixo.
+  -->
+
+  <script>
+    const CONFIG = {
+      // Imagem extra que aparece AO LADO do personagem quando a checkbox estiver marcada.
+      // Deixe "" (vazio) para não mostrar nada naquela situação.
+      //
+      // Coloque as imagens na pasta "imagens/status/" do projeto e use o caminho relativo:
+      //   isLesion: "imagens/status/lesionado.png",
+      // Atenção: no GitHub Pages o nome diferencia maiúsculas/minúsculas
+      // ("Lesionado.PNG" é diferente de "lesionado.png"). Prefira nomes sem espaços/acentos.
+      // Links externos (https://...) também funcionam.
+      imagensDeStatus: {
+        isLesion:    "imagens/status/machucado.png",    // checkbox "Machucado"    (antes: Lesionado)
+        isIncon:     "imagens/status/inconsciente.png", // checkbox "Inconsciente"
+        isDying:     "imagens/status/morrendo.png",     // checkbox "Morrendo"
+        isDisturbed: "imagens/status/sangrando.png",    // checkbox "Sangrando"    (antes: Pertubado)
+        isInsane:    "imagens/status/cego.png",         // checkbox "Cego"         (antes: Enlouquecido)
+      },
+      tamanhoImagemStatus: 140, // largura/altura em pixels da imagem extra
+
+      // Trocar o portrait conforme o estado (comportamento da página antiga).
+      usarPortraitsInterativos: false,
+
+      mostrarVida: true,
+      mostrarEsforco: true,
+      mostrarMaximoEsforco: false, // true = "10/10", false = "10" (igual à página antiga)
+
+      colunas: 3,
+    };
+  </script>
+
+  <style>
+    @font-face {
+      font-family: "Gelio Fasolada";
+      src: url("assets/lib/assets/Gelio Fasolada.ttf") format("truetype");
+    }
+
+    :root {
+      --portrait: 340px;
+      --cor-texto: rgba(255, 255, 255, 0.54);
+      --brilho-vida: #ff0000;
+      --brilho-pe: #00ff00; /* PE: cor original roxa #d000ff */
+      --brilho-status: #ff0000; /* brilho atrás das imagens de status */
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: transparent; /* fundo transparente para o OBS */
+      overflow: hidden;
+      font-family: "Gelio Fasolada", sans-serif;
+    }
+
+    #grade {
+      display: grid;
+      grid-template-columns: repeat(var(--colunas, 3), 1fr);
+      gap: 10px;
+      padding: 10px;
+    }
+
+    .card {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      height: var(--portrait);
+    }
+
+    .portrait {
+      width: var(--portrait);
+      height: var(--portrait);
+      flex: none;
+      object-fit: contain;
+    }
+
+    .status {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 6px;
+      height: 100%;
+      flex: none;
+    }
+    .status img {
+      object-fit: contain;
+      /* Brilho que segue o contorno do PNG (mesmo efeito dos números de vida/PE).
+         Para um brilho mais forte, repita ou aumente o valor em px. */
+      filter: drop-shadow(0 0 10px var(--brilho-status)) drop-shadow(0 0 10px var(--brilho-status));
+    }
+    .status:empty { display: none; }
+
+    .valores {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 40px;
+      height: 100%;
+    }
+
+    .valor {
+      font-size: 55px;
+      color: var(--cor-texto);
+      line-height: 1;
+      white-space: nowrap;
+    }
+    .vida { text-shadow: 0 0 10px var(--brilho-vida), 0 0 10px var(--brilho-vida); }
+    .pe   { text-shadow: 0 0 10px var(--brilho-pe), 0 0 10px var(--brilho-pe); }
+
+    /* Tela de login (só aparece se não estiver logado) */
+    #login {
+      display: none;
+      max-width: 320px;
+      margin: 60px auto;
+      padding: 24px;
+      background: #000;
+      color: #fff;
+      border: 1px solid #fff;
+      font-family: sans-serif;
+    }
+    #login h1 { font-family: "Gelio Fasolada", sans-serif; font-weight: normal; margin-top: 0; }
+    #login input, #login button {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      margin: 8px 0;
+      padding: 10px;
+      font-size: 16px;
+    }
+    #login .erro { color: #ff6b6b; min-height: 1.2em; }
+
+    #mensagem {
+      display: none;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 12px;
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <form id="login">
+    <h1>Login do mestre</h1>
+    <input id="email" type="email" placeholder="Email" autocomplete="username" required />
+    <input id="senha" type="password" placeholder="Senha" autocomplete="current-password" required />
+    <button type="submit">Entrar</button>
+    <div class="erro" id="erroLogin"></div>
+  </form>
+
+  <div id="mensagem"></div>
+  <div id="grade"></div>
+
+  <!-- Mesma versão do Firebase usada no index.html, para compartilhar o login -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+
+  <script>
+    firebase.initializeApp({
+      apiKey: "AIzaSyCg-IIcBZ2li_WVKLPtrihuuRUGgOZWfy4",
+      authDomain: "fichaordemrpg-3e9f0.firebaseapp.com",
+      projectId: "fichaordemrpg-3e9f0",
+      storageBucket: "fichaordemrpg-3e9f0.appspot.com",
+      messagingSenderId: "9898850709",
+      appId: "1:9898850709:web:13f62399ac0d1731f85e9c",
+    });
+
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+
+    const grade = document.getElementById("grade");
+    const formLogin = document.getElementById("login");
+    const mensagem = document.getElementById("mensagem");
+
+    grade.style.setProperty("--colunas", CONFIG.colunas);
+
+    // Estado atual
+    let pararMestre = null;            // listener do documento do mestre
+    const pararPlayers = new Map();    // uid -> listener do player
+    const dadosPlayers = new Map();    // uid -> dados do player
+    let ordemPlayers = [];             // ordem definida em usersUidList
+
+    function mostrarMensagem(texto) {
+      mensagem.textContent = texto;
+      mensagem.style.display = texto ? "block" : "none";
+    }
+
+    // ---------- Login ----------
+    if (new URLSearchParams(location.search).has("sair")) {
+      auth.signOut().then(() => { location.href = location.pathname; });
+    }
+
+    formLogin.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      document.getElementById("erroLogin").textContent = "";
+      try {
+        await auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL);
+        await auth.signInWithEmailAndPassword(
+          document.getElementById("email").value.trim(),
+          document.getElementById("senha").value
+        );
+      } catch (err) {
+        document.getElementById("erroLogin").textContent = "Não foi possível entrar: " + err.message;
+      }
+    });
+
+    auth.onAuthStateChanged((usuario) => {
+      limparTudo();
+      if (!usuario) {
+        formLogin.style.display = "block";
+        return;
+      }
+      formLogin.style.display = "none";
+      escutarMestre(usuario.uid);
+    });
+
+    // ---------- Firebase (somente leitura) ----------
+    function limparTudo() {
+      if (pararMestre) pararMestre();
+      pararMestre = null;
+      pararPlayers.forEach((parar) => parar());
+      pararPlayers.clear();
+      dadosPlayers.clear();
+      ordemPlayers = [];
+      grade.innerHTML = "";
+      mostrarMensagem("");
+    }
+
+    function escutarMestre(uidMestre) {
+      pararMestre = db.collection("masterSheet").doc(uidMestre).onSnapshot(
+        (doc) => {
+          const dados = doc.data() || {};
+          if (!dados.isMaster) {
+            mostrarMensagem("Esta conta não é de mestre. Abra obs.html?sair para trocar de conta.");
+          } else {
+            mostrarMensagem("");
+          }
+          ordemPlayers = Array.isArray(dados.usersUidList) ? dados.usersUidList : [];
+          sincronizarPlayers();
+        },
+        (err) => mostrarMensagem("Erro ao ler dados do mestre: " + err.message)
+      );
+    }
+
+    function sincronizarPlayers() {
+      // Para de escutar players removidos da mesa
+      for (const [uid, parar] of pararPlayers) {
+        if (!ordemPlayers.includes(uid)) {
+          parar();
+          pararPlayers.delete(uid);
+          dadosPlayers.delete(uid);
+        }
+      }
+      // Começa a escutar players novos
+      for (const uid of ordemPlayers) {
+        if (pararPlayers.has(uid)) continue;
+        const parar = db.collection("userSheet").doc(uid).onSnapshot(
+          (doc) => {
+            if (doc.exists) dadosPlayers.set(uid, doc.data());
+            else dadosPlayers.delete(uid);
+            desenhar();
+          },
+          (err) => console.error("Erro ao ler player", uid, err)
+        );
+        pararPlayers.set(uid, parar);
+      }
+      desenhar();
+    }
+
+    // ---------- Desenho ----------
+    function escolherPortrait(p) {
+      const urls = Array.isArray(p.imgUrl) ? p.imgUrl : [];
+      const estado = CONFIG.usarPortraitsInterativos ? Number(p.imageState) || 0 : 0;
+      return urls[estado] || urls[0] || "";
+    }
+
+    function imagensDeStatusAtivas(p) {
+      const interacoes = Array.isArray(p.portraitInteractions) ? p.portraitInteractions[0] : null;
+      if (!interacoes) return [];
+      return Object.entries(CONFIG.imagensDeStatus)
+        .filter(([campo, url]) => url && interacoes[campo] === true)
+        .map(([, url]) => url);
+    }
+
+    function criarImg(src, classe, tamanho) {
+      const img = document.createElement("img");
+      img.src = src;
+      img.alt = "";
+      if (classe) img.className = classe;
+      if (tamanho) { img.width = tamanho; img.height = tamanho; }
+      return img;
+    }
+
+    function desenhar() {
+      grade.innerHTML = "";
+      for (const uid of ordemPlayers) {
+        const p = dadosPlayers.get(uid);
+        if (!p) continue;
+
+        const card = document.createElement("div");
+        card.className = "card";
+
+        const portrait = escolherPortrait(p);
+        if (portrait) card.appendChild(criarImg(portrait, "portrait"));
+
+        // Imagem(ns) extra(s) ao lado do personagem
+        const status = document.createElement("div");
+        status.className = "status";
+        for (const url of imagensDeStatusAtivas(p)) {
+          status.appendChild(criarImg(url, "", CONFIG.tamanhoImagemStatus));
+        }
+        card.appendChild(status);
+
+        const valores = document.createElement("div");
+        valores.className = "valores";
+        if (CONFIG.mostrarVida) {
+          const vida = document.createElement("div");
+          vida.className = "valor vida";
+          vida.textContent = (p.minLife ?? 0) + "/" + (p.maxLife ?? 0);
+          valores.appendChild(vida);
+        }
+        if (CONFIG.mostrarEsforco) {
+          const pe = document.createElement("div");
+          pe.className = "valor pe";
+          pe.textContent = CONFIG.mostrarMaximoEsforco
+            ? (p.minPe ?? 0) + "/" + (p.maxPe ?? 0)
+            : String(p.minPe ?? 0);
+          valores.appendChild(pe);
+        }
+        card.appendChild(valores);
+
+        grade.appendChild(card);
+      }
+    }
+  </script>
+</body>
+</html>

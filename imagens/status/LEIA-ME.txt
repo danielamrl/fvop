@@ -1,0 +1,10 @@
+Coloque aqui as imagens que aparecem ao lado do personagem no obs.html
+quando uma checkbox estiver marcada.
+
+Depois, aponte cada imagem no bloco CONFIG do obs.html, por exemplo:
+  isLesion: "imagens/status/lesionado.png",
+
+Dicas:
+- Use nomes em minusculas, sem espacos e sem acentos (ex: lesionado.png, morrendo.png).
+- PNG com fundo transparente fica melhor no OBS.
+- Prefira imagens leves (ate ~500 KB cada).
