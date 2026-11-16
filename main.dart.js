@@ -69501,11 +69501,15 @@ m=s.as=c7.z
 l=c7.Q
 s.c=l
 k=c4.b
+/* PORTRAITS INTERATIVOS DESATIVADOS - as checkboxes nao trocam mais o portrait (sempre o NORMAL).
+   Para reativar, apague a linha "s.a=0" abaixo e descomente o bloco original:
 if(k.f)if(k.w||k.x)s.a=2
 else{j=k.z
 if(j||k.y){if(k.r)s.a=4
 else if(k.y||j)s.a=3}else if(k.r)s.a=1
 else s.a=0}else s.a=0
+*/
+s.a=0
 j=k.z
 i=k.y
 h=k.w
@@ -69548,7 +69552,13 @@ e=A.cq(A.c([A.ZY("lib/assets/images/ORDEM LOGO.png",125),A.b0(c5,20,c5),A.aw("In
 a2=A.b0(c5,20,c5)
 a3=A.vG(360)
 a4=A.bQ(0,0,700,0,0)
-a4=A.j4(A.aX(c5,A.bq(A.c([A.dz(!1,a3,!0,A.AU(new A.xg(s.b,s.a,c5),"Clique para inserir uma foto 1:1 (Ex: 600 x 600, 1000 x 1000 e etc) Utilize links direto de uma nuvem, exemplo links de imagem do Discord (Recomendando)",a4),c5,!0,c5,c5,B.X,c5,c5,c5,c5,c5,c5,new A.adl(s,c8,j,c7),c5,c5,c5),A.b0(c5,c5,100),A.b0(A.AU(new A.rB(!0,c5),"Rolagem de ataque: Insira o valor de seu atributo seguido do valor de sua p\xe9rica!",A.bQ(0,0,700,0,0)),c5,220)],c),B.p,B.u,B.r),B.n,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5),B.fx)
+a4=A.j4(A.aX(c5,A.bq(A.c([A.dz(!1,a3,!0,A.AU(new A.xg(s.b,s.a,c5),"Clique para inserir uma foto 1:1 (Ex: 600 x 600, 1000 x 1000 e etc) Utilize links direto de uma nuvem, exemplo links de imagem do Discord (Recomendando)",a4),c5,!0,c5,c5,B.X,c5,c5,c5,c5,c5,c5,new A.adl(s,c8,j,c7),c5,c5,c5),A.b0(c5,c5,30),/* LISTA DE CHECKBOXES AO LADO DA FOTO */A.cq(A.c([
+A.bq(A.c([A.qf(A.U(255,0,0,0),A.U(255,255,255,255),new A.adp(k),new A.jN(new A.adq(),B.l,1,B.m),0,k.r),A.aw("Machucado",c5,c5,c5,A.X(c5,c5,B.e,c5,c5,c5,c5,c5,c6,c5,c5,16.666666666666668,c5,c5,c5,c5,!0,c5,c5,c5,c5,c5,A.c([],t.A6),c5,c5),c5,c5)],c),B.p,B.u,B.bp),
+A.bq(A.c([A.qf(A.U(255,0,0,0),A.U(255,255,255,255),new A.adc(k),new A.jN(new A.add(),B.l,1,B.m),0,k.y),A.aw("Sangrando",c5,c5,c5,A.X(c5,c5,B.e,c5,c5,c5,c5,c5,c6,c5,c5,16.666666666666668,c5,c5,c5,c5,!0,c5,c5,c5,c5,c5,A.c([],t.A6),c5,c5),c5,c5)],c),B.p,B.u,B.bp),
+A.bq(A.c([A.qf(A.U(255,0,0,0),A.U(255,255,255,255),new A.ad5(k),new A.jN(new A.ad6(),B.l,1,B.m),c5,k.x),A.aw("Inconsciente",c5,c5,c5,A.X(c5,c5,B.e,c5,c5,c5,c5,c5,c6,c5,c5,16.666666666666668,c5,c5,c5,c5,!0,c5,c5,c5,c5,c5,A.c([],t.A6),c5,c5),c5,c5)],c),B.p,B.u,B.bp),
+A.bq(A.c([A.qf(A.U(255,0,0,0),A.U(255,255,255,255),new A.ade(k),new A.jN(new A.adg(),B.l,1,B.m),c5,k.z),A.aw("Cego",c5,c5,c5,A.X(c5,c5,B.e,c5,c5,c5,c5,c5,c6,c5,c5,16.666666666666668,c5,c5,c5,c5,!0,c5,c5,c5,c5,c5,A.c([],t.A6),c5,c5),c5,c5)],c),B.p,B.u,B.bp),
+A.bq(A.c([A.qf(A.U(255,0,0,0),A.U(255,255,255,255),new A.ad7(k),new A.jN(new A.ad8(),B.l,1,B.m),c5,k.w),A.aw("Morrendo",c5,c5,c5,A.X(c5,c5,B.e,c5,c5,c5,c5,c5,c6,c5,c5,16.666666666666668,c5,c5,c5,c5,!0,c5,c5,c5,c5,c5,A.c([],t.A6),c5,c5),c5,c5)],c),B.p,B.u,B.bp)
+],c),B.fM,B.u,B.bp),A.b0(c5,c5,40),A.b0(A.AU(new A.rB(!0,c5),"Rolagem de ataque: Insira o valor de seu atributo seguido do valor de sua p\xe9rica!",A.bQ(0,0,700,0,0)),c5,220)],c),B.p,B.u,B.r),B.n,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5),B.fx)
 a3=A.b0(c5,20,c5)
 a5=t.A6
 a6=A.qW(A.c([A.aw("Vida (PV)",c5,c5,c5,A.X(c5,c5,B.e,c5,c5,c5,c5,c5,c6,c5,c5,16.666666666666668,c5,c5,c5,c5,!0,c5,c5,c5,c5,c5,A.c([new A.es(0,B.dZ,B.hG,B.k,7)],a5),c5,c5),c5,c5),A.bq(A.c([A.lV(B.bT,c5,A.dL(B.h4,B.e,c5),16,new A.adm(s,j,c7),new A.aq(0,0,0,0),1,c5),A.lV(B.bT,c5,A.dL(B.ej,B.e,c5),16,new A.adn(s,j,c7),new A.aq(0,0,0,0),1,c5)],c),B.p,B.u,B.r)],c),B.p,B.a5,c5,B.au,B.r,c5,c5,B.aU)
@@ -69589,7 +69599,7 @@ c7=A.dz(!1,c5,!0,A.aX(c5,A.jy(B.b3,A.c([a8,c0,A.bq(A.c([A.aw(A.d(n),c5,c5,c5,A.X
 s=A.b0(c5,40,c5)
 c2=J.HB(7,t.ib)
 for(j=c4.r,c3=0;c3<7;++c3)c2[c3]=j[c3]
-return A.aX(c5,A.zO(h,B.X,A.Ke(!0,A.aq8(A.hS(A.aA_(A.aX(c5,A.cq(A.c([a,e,a2,A.aX(c5,A.bq(A.c([new A.dy(2,B.ay,A.aX(c5,A.cq(A.c([new A.cP(B.z4,a4,c5),a3,A.dz(!1,c5,!0,A.cq(A.c([a6,a7,a9,b0,b3,b4,k,/* SANIDADE DESATIVADA (titulo + barra) - para reativar, descomente: b2,b1,b5, (checkboxes b3 e k agora sao de status: Machucado/Inconsciente/Morrendo/Sangrando/Cego) */b7,b6,b8,c7,s,A.hS(A.b0(A.aoW(c2,7,c5,!0),c5,400),c5,c5)],c),B.fM,B.u,B.r),c5,!0,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5)],c),B.p,B.u,B.r),B.n,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5),c5)],c),B.p,B.au,B.r),B.n,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5,a0/2),A.b0(c5,40,c5)],c),B.p,B.u,B.r),B.n,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5,a0),B.aD),c5,c5),c5,B.bZ,c5,c5,A.EM(),B.G,c5,c5,10,a1,!0,B.ct,c5),B.Z,!0),new A.Gx(b,new A.HT(d,c5,B.aD,!1,c5,!0,B.lW,!1,c5,1,B.aJ,B.uS,c5,B.ad,c5),c5),!1),B.n,c5,c5,new A.bz(i,g,c5,c5,c5,c5,B.K),c5,c5,c5,c5,c5,c5,c5,c5)}else{A.dH(c9.i(0))
+return A.aX(c5,A.zO(h,B.X,A.Ke(!0,A.aq8(A.hS(A.aA_(A.aX(c5,A.cq(A.c([a,e,a2,A.aX(c5,A.bq(A.c([new A.dy(2,B.ay,A.aX(c5,A.cq(A.c([new A.cP(B.z4,a4,c5),a3,A.dz(!1,c5,!0,A.cq(A.c([a6,a7,a9,/* CHECKBOXES ANTIGAS ABAIXO DA BARRA DE VIDA - agora ficam em lista ao lado da foto: b0,b3,b4,k, */ /* SANIDADE DESATIVADA (titulo + barra) - para reativar, descomente: b2,b1,b5, */b7,b6,b8,c7,s,A.hS(A.b0(A.aoW(c2,7,c5,!0),c5,400),c5,c5)],c),B.fM,B.u,B.r),c5,!0,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5)],c),B.p,B.u,B.r),B.n,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5),c5)],c),B.p,B.au,B.r),B.n,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5,a0/2),A.b0(c5,40,c5)],c),B.p,B.u,B.r),B.n,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5,a0),B.aD),c5,c5),c5,B.bZ,c5,c5,A.EM(),B.G,c5,c5,10,a1,!0,B.ct,c5),B.Z,!0),new A.Gx(b,new A.HT(d,c5,B.aD,!1,c5,!0,B.lW,!1,c5,1,B.aJ,B.uS,c5,B.ad,c5),c5),!1),B.n,c5,c5,new A.bz(i,g,c5,c5,c5,c5,B.K),c5,c5,c5,c5,c5,c5,c5,c5)}else{A.dH(c9.i(0))
 return new A.oc(c5)}},
 $S:443}
 A.ad3.prototype={
@@ -71048,7 +71058,7 @@ A.RU.prototype={
 aI(){this.bb()
 var s=A.bH(null,A.bQ(0,0,0,0,2),null,null,this)
 this.d=s
-A.b(s,"_animationController").vP(0)},
+/* ANIMACAO DA ONDA DAS BARRAS (VIDA/PE) DESATIVADA - para reativar, descomente: A.b(s,"_animationController").vP(0) */},
 m(a){A.b(this.d,"_animationController").m(0)
 this.TS(0)},
 G(a,b){return A.fY(A.d8(B.fP,A.b(this.d,"_animationController"),null),new A.ahO(this),null)}}
