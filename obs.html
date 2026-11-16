@@ -36,7 +36,8 @@
         isDisturbed: "imagens/status/sangrando.png",    // checkbox "Sangrando"    (antes: Pertubado)
         isInsane:    "imagens/status/cego.png",         // checkbox "Cego"         (antes: Enlouquecido)
       },
-      tamanhoImagemStatus: 140, // largura/altura em pixels da imagem extra
+      tamanhoImagemStatus: 45, // largura/altura em pixels da imagem extra (antes: 140)
+                               // Se não couberem todas na altura do card, elas encolhem sozinhas.
 
       // Trocar o portrait conforme o estado (comportamento da página antiga).
       usarPortraitsInterativos: false,
@@ -102,6 +103,10 @@
     }
     .status img {
       object-fit: contain;
+      /* Garante que até 5 ícones caibam na altura do card (5 ícones + 4 espaços de 6px) */
+      flex: 0 1 auto;
+      min-height: 0;
+      max-height: calc((100% - 4 * 6px) / 5);
       /* Brilho que segue o contorno do PNG (mesmo efeito dos números de vida/PE).
          Para um brilho mais forte, repita ou aumente o valor em px. */
       filter: drop-shadow(0 0 10px var(--brilho-status)) drop-shadow(0 0 10px var(--brilho-status));
