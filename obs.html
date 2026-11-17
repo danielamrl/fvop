@@ -37,9 +37,10 @@
         isInsane:    "imagens/status/cego.png",         // checkbox "Cego"         (antes: Enlouquecido)
       },
       // Os ícones ficam numa "caixa de status" de tamanho fixo (ver --largura-status e
-      // --altura-status no CSS) e dividem o espaço entre si:
-      //   1 status = ocupa a caixa toda | 2 = lado a lado | 3-4 = grade 2x2 | 5 = grade 2x3
-      colunasStatus: 2, // máximo de ícones lado a lado
+      // --altura-status no CSS), sempre um por vez, ocupando a caixa toda.
+      // Com 2 ou mais status ativos, eles se alternam com uma transição de fade.
+      intervaloStatus: 3000, // tempo (ms) que cada ícone fica na tela antes de trocar
+      // A duração do fade fica no CSS: --transicao-status
 
       // Trocar o portrait conforme o estado (comportamento da página antiga).
       usarPortraitsInterativos: false,
@@ -67,7 +68,7 @@
       --brilho-status: #ff0000; /* brilho atrás das imagens de status */
       --largura-status: 170px; /* tamanho fixo da caixa onde os ícones de status se dividem */
       --altura-status: var(--portrait);
-      --espaco-status: 8px;    /* espaço entre os ícones */
+      --transicao-status: 0.6s; /* duração do fade ao trocar de ícone */
     }
 
     html, body {
@@ -99,28 +100,28 @@
       object-fit: contain;
     }
 
-    /* Caixa de status com tamanho FIXO: os ícones se dividem dentro dela.
-       O número de colunas/linhas é definido pelo JS conforme quantos status estão ativos. */
+    /* Caixa de status com tamanho FIXO. Todos os ícones ficam empilhados no mesmo lugar
+       e só o que tem a classe "ativa" fica visível (o JS alterna entre eles). */
     .status {
       display: grid;
-      grid-template-columns: repeat(var(--cols, 1), 1fr);
-      grid-template-rows: repeat(var(--rows, 1), 1fr);
-      gap: var(--espaco-status);
       width: var(--largura-status);
       height: var(--altura-status);
       flex: none;
     }
     .status img {
-      /* Cada ícone preenche a sua célula da grade, mantendo a proporção */
+      grid-area: 1 / 1; /* todos na mesma célula, um por cima do outro */
       width: 100%;
       height: 100%;
       min-width: 0;
       min-height: 0;
       object-fit: contain;
+      opacity: 0;
+      transition: opacity var(--transicao-status) ease-in-out;
       /* Brilho que segue o contorno do PNG (mesmo efeito dos números de vida/PE).
          Para um brilho mais forte, repita ou aumente o valor em px. */
       filter: drop-shadow(0 0 10px var(--brilho-status)) drop-shadow(0 0 10px var(--brilho-status));
     }
+    .status img.ativa { opacity: 1; }
 
     .valores {
       display: flex;
@@ -302,6 +303,20 @@
       desenhar();
     }
 
+    // ---------- Carrossel dos status ----------
+    // Um único relógio para todos os players: a cada intervalo, cada caixa de status
+    // com 2 ou mais ícones passa para o próximo (com fade via CSS).
+    let passoCarrossel = 0;
+    setInterval(() => {
+      passoCarrossel++;
+      document.querySelectorAll(".status").forEach((caixa) => {
+        const imgs = caixa.querySelectorAll("img");
+        if (imgs.length < 2) return;
+        const atual = passoCarrossel % imgs.length;
+        imgs.forEach((img, i) => img.classList.toggle("ativa", i === atual));
+      });
+    }, CONFIG.intervaloStatus);
+
     // ---------- Desenho ----------
     function escolherPortrait(p) {
       const urls = Array.isArray(p.imgUrl) ? p.imgUrl : [];
@@ -361,13 +376,12 @@
         const status = document.createElement("div");
         status.className = "status";
         const ativas = imagensDeStatusAtivas(p);
-        const cols = Math.max(1, Math.min(ativas.length, CONFIG.colunasStatus));
-        const rows = Math.max(1, Math.ceil(ativas.length / cols));
-        status.style.setProperty("--cols", cols);
-        status.style.setProperty("--rows", rows);
-        for (const url of ativas) {
-          status.appendChild(criarImg(url, ""));
-        }
+        ativas.forEach((url, i) => {
+          const img = criarImg(url, "");
+          // Continua do ponto atual do carrossel (não reinicia quando os dados atualizam)
+          if (i === passoCarrossel % ativas.length) img.classList.add("ativa");
+          status.appendChild(img);
+        });
         card.appendChild(status);
 
         grade.appendChild(card);
