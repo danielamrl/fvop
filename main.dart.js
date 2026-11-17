@@ -20318,12 +20318,13 @@ _.x=i
 _.y=j
 _.z=k
 _.Q=l},
-ii:function ii(a,b,c,d,e){var _=this
+ii:function ii(a,b,c,d,e,f){var _=this
 _.a=a
 _.b=b
 _.c=c
 _.d=d
-_.e=e},
+_.e=e
+_.f=f===!0},
 md:function md(a){this.a=a},
 P3:function P3(a,b){var _=this
 _.d=a
@@ -20426,6 +20427,7 @@ NY:function NY(a,b){var _=this
 _.d=a
 _.f=!0
 _.z=_.y=_.x=_.w=_.r=!1
+_.fvApavorado=!1
 _.a=null
 _.b=b
 _.c=null},
@@ -20504,6 +20506,8 @@ _.d=d},
 adq:function adq(){},
 adp:function adp(a){this.a=a},
 acZ:function acZ(a){this.a=a},
+fvA:function fvA(a){this.a=a},
+fvB:function fvB(a){this.a=a},
 ad6:function ad6(){},
 ad5:function ad5(a){this.a=a},
 acY:function acY(a){this.a=a},
@@ -69373,7 +69377,7 @@ CK(){return this.c.$0()}}
 A.Qw.prototype={
 G(a,b){var s,r,q,p,o,n,m,l,k=this,j=null,i="Gelio Fasolada"
 b.O(t.w).toString
-s=A.h0(j,B.aE,new A.dO("https://pbs.twimg.com/media/E3JfBXkXMAkL5KX?format=jpg&name=4096x4096",1,j),B.ao,1)
+s=A.h0(j,B.aE,new A.dO("imagens/fundo/login.png"/* fundo original: https://pbs.twimg.com/media/E3JfBXkXMAkL5KX?format=jpg&name=4096x4096 */,1,j),B.ao,1)
 r=A.U(176,0,0,0)
 q=A.lz(B.e,1)
 p=A.ZY("lib/assets/images/ORDEM LOGO.png",100)
@@ -69514,7 +69518,7 @@ j=k.z
 i=k.y
 h=k.w
 g=k.x
-l[0]=new A.ii(k.r,g,h,i,j)
+l[0]=new A.ii(k.r,g,h,i,j,k.fvApavorado)
 j=c4.c
 i=j.a
 h=$.ad
@@ -69536,7 +69540,7 @@ d=A.U(255,255,255,255)
 d=A.qf(A.U(255,0,0,0),d,new A.ad2(k),new A.jN(new A.ad3(),B.l,1,B.m),0,k.f)
 c=t.t
 d=A.aqs(A.c([new A.Gz(A.cq(A.c([new A.HS(A.aw("Ativa a Intera\xe7\xe3o Entre os Portraits",c5,c5,c5,A.X(c5,c5,B.e,c5,c5,c5,c5,c5,c6,c5,c5,c5,c5,c5,c5,c5,!0,c5,c5,c5,c5,c5,c5,c5,c5),c5,c5),d,c5)],c),B.p,B.u,B.r),c5)],c),!0,!0,!0)
-h=A.aw("CRIADOR DA FVOP: Luziiano @Britaniarts / Ver. 0.12",c5,c5,c5,A.X(c5,c5,B.e,c5,c5,c5,c5,c5,c6,c5,c5,25,c5,c5,c5,c5,!0,c5,c5,c5,c5,c5,c5,c5,c5),c5,c5)
+h=A.b0(c5,c5,c5)/* TITULO REMOVIDO - original: A.aw("CRIADOR DA FVOP: Luziiano @Britaniarts / Ver. 0.12",...) */
 e=A.b0(c5,c5,20)
 a=A.tu(B.cj,c5,c5,c5,c5,c5,c5,c5,new A.J(50,30),c5,B.Z,c5,c5,c5,c5,c5,c5,c5)
 a=A.Ay(A.bq(A.c([A.aw("Cr\xe9ditos",c5,c5,c5,A.X(c5,c5,B.e,c5,c5,c5,c5,c5,c6,c5,c5,25,c5,c5,c5,c5,!0,c5,c5,c5,c5,c5,c5,c5,c5),c5,c5),A.b0(c5,c5,20)],c),B.p,B.u,B.r),new A.ad4(c8),a)
@@ -69544,11 +69548,11 @@ a0=A.bQ(0,0,700,0,0)
 a1=A.tu(B.cj,c5,c5,c5,c5,c5,c5,c5,new A.J(50,30),c5,B.Z,c5,c5,c5,c5,c5,c5,c5)
 a0=A.AU(A.Ay(A.bq(A.c([A.aw("UID",c5,c5,c5,A.X(c5,c5,B.e,c5,c5,c5,c5,c5,c6,c5,c5,25,c5,c5,c5,c5,!0,c5,c5,c5,c5,c5,c5,c5,c5),c5,c5),A.b0(c5,c5,20)],c),B.p,B.u,B.r),new A.adf(j),a1),"Clique com o bot\xe3o esquerdo para copiar o UID",a0)
 a1=A.tu(B.cj,c5,c5,c5,c5,c5,c5,c5,new A.J(50,30),c5,B.Z,c5,c5,c5,c5,c5,c5,c5)
-h=A.TW(A.c([e,a,a0,A.Ay(A.bq(A.c([A.aw("Sair",c5,c5,c5,A.X(c5,c5,B.e,c5,c5,c5,c5,c5,c6,c5,c5,25,c5,c5,c5,c5,!0,c5,c5,c5,c5,c5,c5,c5,c5),c5,c5),A.b0(c5,c5,20)],c),B.p,B.u,B.r),new A.adk(k),a1)],c),B.l,20,B.l,h,80)
+h=A.TW(A.c([e,/* ABA CREDITOS REMOVIDA: a, */a0,A.Ay(A.bq(A.c([A.aw("Sair",c5,c5,c5,A.X(c5,c5,B.e,c5,c5,c5,c5,c5,c6,c5,c5,25,c5,c5,c5,c5,!0,c5,c5,c5,c5,c5,c5,c5,c5),c5,c5),A.b0(c5,c5,20)],c),B.p,B.u,B.r),new A.adk(k),a1)],c),B.l,20,B.l,h,80)
 a1=A.U(255,255,255,255)
 a0=c4.d
 a=A.b0(c5,20,c5)
-e=A.cq(A.c([A.ZY("lib/assets/images/ORDEM LOGO.png",125),A.b0(c5,20,c5),A.aw("Investigador Paranormal",c5,c5,c5,A.X(c5,c5,B.e,c5,c5,c5,c5,c5,c6,c5,c5,37.5,c5,c5,c5,c5,!0,c5,0,c5,c5,c5,c5,c5,c5),c5,c5)],c),B.p,B.u,B.r)
+e=A.cq(A.c([A.ZY("lib/assets/images/ORDEM LOGO.png",125),A.b0(c5,20,c5)/* TITULO "Investigador Paranormal" MOVIDO para a coluna das barras (alinhado a esquerda) */],c),B.p,B.u,B.r)
 a2=A.b0(c5,20,c5)
 a3=A.vG(360)
 a4=A.bQ(0,0,700,0,0)
@@ -69558,6 +69562,8 @@ A.bq(A.c([A.qf(A.U(255,0,0,0),A.U(255,255,255,255),new A.adc(k),new A.jN(new A.a
 A.bq(A.c([A.qf(A.U(255,0,0,0),A.U(255,255,255,255),new A.ad5(k),new A.jN(new A.ad6(),B.l,1,B.m),c5,k.x),A.aw("Inconsciente",c5,c5,c5,A.X(c5,c5,B.e,c5,c5,c5,c5,c5,c6,c5,c5,16.666666666666668,c5,c5,c5,c5,!0,c5,c5,c5,c5,c5,A.c([],t.A6),c5,c5),c5,c5)],c),B.p,B.u,B.bp),
 A.bq(A.c([A.qf(A.U(255,0,0,0),A.U(255,255,255,255),new A.ade(k),new A.jN(new A.adg(),B.l,1,B.m),c5,k.z),A.aw("Cego",c5,c5,c5,A.X(c5,c5,B.e,c5,c5,c5,c5,c5,c6,c5,c5,16.666666666666668,c5,c5,c5,c5,!0,c5,c5,c5,c5,c5,A.c([],t.A6),c5,c5),c5,c5)],c),B.p,B.u,B.bp),
 A.bq(A.c([A.qf(A.U(255,0,0,0),A.U(255,255,255,255),new A.ad7(k),new A.jN(new A.ad8(),B.l,1,B.m),c5,k.w),A.aw("Morrendo",c5,c5,c5,A.X(c5,c5,B.e,c5,c5,c5,c5,c5,c6,c5,c5,16.666666666666668,c5,c5,c5,c5,!0,c5,c5,c5,c5,c5,A.c([],t.A6),c5,c5),c5,c5)],c),B.p,B.u,B.bp)
+],c),B.fM,B.u,B.bp),/* SEGUNDA COLUNA DE CONDICOES */A.b0(c5,c5,20),A.cq(A.c([
+A.bq(A.c([A.qf(A.U(255,0,0,0),A.U(255,255,255,255),new A.fvA(k),new A.jN(new A.adq(),B.l,1,B.m),0,k.fvApavorado),A.aw("Apavorado",c5,c5,c5,A.X(c5,c5,B.e,c5,c5,c5,c5,c5,c6,c5,c5,16.666666666666668,c5,c5,c5,c5,!0,c5,c5,c5,c5,c5,A.c([],t.A6),c5,c5),c5,c5)],c),B.p,B.u,B.bp)
 ],c),B.fM,B.u,B.bp),A.b0(c5,c5,40),A.b0(A.AU(new A.rB(!0,c5),"Rolagem de ataque: Insira o valor de seu atributo seguido do valor de sua p\xe9rica!",A.bQ(0,0,700,0,0)),c5,220)],c),B.p,B.u,B.r),B.n,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5),B.fx)
 a3=A.b0(c5,20,c5)
 a5=t.A6
@@ -69599,7 +69605,7 @@ c7=A.dz(!1,c5,!0,A.aX(c5,A.jy(B.b3,A.c([a8,c0,A.bq(A.c([A.aw(A.d(n),c5,c5,c5,A.X
 s=A.b0(c5,40,c5)
 c2=J.HB(7,t.ib)
 for(j=c4.r,c3=0;c3<7;++c3)c2[c3]=j[c3]
-return A.aX(c5,A.zO(h,B.X,A.Ke(!0,A.aq8(A.hS(A.aA_(A.aX(c5,A.cq(A.c([a,e,a2,A.aX(c5,A.bq(A.c([new A.dy(2,B.ay,A.aX(c5,A.cq(A.c([new A.cP(B.z4,a4,c5),a3,A.dz(!1,c5,!0,A.cq(A.c([a6,a7,a9,/* CHECKBOXES ANTIGAS ABAIXO DA BARRA DE VIDA - agora ficam em lista ao lado da foto: b0,b3,b4,k, */ /* SANIDADE DESATIVADA (titulo + barra) - para reativar, descomente: b2,b1,b5, */b7,b6,b8,c7,s,A.hS(A.b0(A.aoW(c2,7,c5,!0),c5,400),c5,c5)],c),B.fM,B.u,B.r),c5,!0,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5)],c),B.p,B.u,B.r),B.n,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5),c5)],c),B.p,B.au,B.r),B.n,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5,a0/2),A.b0(c5,40,c5)],c),B.p,B.u,B.r),B.n,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5,a0),B.aD),c5,c5),c5,B.bZ,c5,c5,A.EM(),B.G,c5,c5,10,a1,!0,B.ct,c5),B.Z,!0),new A.Gx(b,new A.HT(d,c5,B.aD,!1,c5,!0,B.lW,!1,c5,1,B.aJ,B.uS,c5,B.ad,c5),c5),!1),B.n,c5,c5,new A.bz(i,g,c5,c5,c5,c5,B.K),c5,c5,c5,c5,c5,c5,c5,c5)}else{A.dH(c9.i(0))
+return A.aX(c5,A.zO(h,B.X,A.Ke(!0,A.aq8(A.hS(A.aA_(A.aX(c5,A.cq(A.c([a,e,a2,A.aX(c5,A.bq(A.c([new A.dy(2,B.ay,A.aX(c5,A.cq(A.c([A.aw("Investigador Paranormal",c5,c5,c5,A.X(c5,c5,B.e,c5,c5,c5,c5,c5,c6,c5,c5,37.5,c5,c5,c5,c5,!0,c5,0,c5,c5,c5,c5,c5,c5),c5,c5),A.b0(c5,20,c5),new A.cP(new A.aq(0,0,40,0)/* padding original: B.z4 (20,0,40,0) */,a4,c5),a3,A.dz(!1,c5,!0,A.cq(A.c([a6,a7,a9,/* CHECKBOXES ANTIGAS ABAIXO DA BARRA DE VIDA - agora ficam em lista ao lado da foto: b0,b3,b4,k, */ /* SANIDADE DESATIVADA (titulo + barra) - para reativar, descomente: b2,b1,b5, */b7,b6,b8,c7,s,A.hS(A.b0(A.aoW(c2,7,c5,!0),c5,400),c5,c5)],c),B.fM,B.u,B.r),c5,!0,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5)],c),B.fM/* alinhamento original: B.p (centro) */,B.u,B.r),B.n,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5),c5)],c),B.p,B.au,B.r),B.n,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5,a0/2),A.b0(c5,40,c5)],c),B.p,B.u,B.r),B.n,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5,a0),B.aD),c5,c5),c5,B.bZ,c5,c5,A.EM(),B.G,c5,c5,10,a1,!0,B.ct,c5),B.Z,!0),c5/* MENU LATERAL (DRAWER) REMOVIDO - original: new A.Gx(b,new A.HT(d,c5,B.aD,!1,c5,!0,B.lW,!1,c5,1,B.aJ,B.uS,c5,B.ad,c5),c5) */,!1),B.n,c5,c5,new A.bz(i,g,c5,c5,c5,c5,B.K),c5,c5,c5,c5,c5,c5,c5,c5)}else{A.dH(c9.i(0))
 return new A.oc(c5)}},
 $S:443}
 A.ad3.prototype={
@@ -69845,6 +69851,15 @@ A.adp.prototype={
 $1(a){var s=this.a
 s.Y(new A.acZ(s))},
 $S:34}
+/* CONDICAO APAVORADO (campo isScared): fvA = onChanged da checkbox, fvB = alterna o estado */
+A.fvA.prototype={
+$1(a){var s=this.a
+s.Y(new A.fvB(s))},
+$S:34}
+A.fvB.prototype={
+$0(){var s=this.a
+s.fvApavorado=!s.fvApavorado},
+$S:2}
 A.acZ.prototype={
 $0(){var s=this.a
 s.r=!s.r},
@@ -70274,7 +70289,7 @@ h=(f==null?$.ad=$.be():f).bh(0,"[DEFAULT]")
 A.aQ(h,i)
 i=A.ca(new A.aY(h))
 s=9
-return A.Z(new A.cX(e,A.ce(i,i.gbz().bJ(0,"userSheet"))).df(0,0,[u.M,u.M,u.M,u.M,u.M],0,0,0,0,0,0,"Nome da Ficha",A.c([new A.ii(!1,!1,!1,!1,!1)],t.cd),k.a.c.h(0,"uid")),$async$mR)
+return A.Z(new A.cX(e,A.ce(i,i.gbz().bJ(0,"userSheet"))).df(0,0,[u.M,u.M,u.M,u.M,u.M],0,0,0,0,0,0,"Nome da Ficha",A.c([new A.ii(!1,!1,!1,!1,!1,!1)],t.cd),k.a.c.h(0,"uid")),$async$mR)
 case 9:i=k
 i=i!=null?new A.l6(i.a.c.h(0,"uid")):null
 q=i
@@ -70345,11 +70360,11 @@ return new A.dE(A.co(r,q),A.co(s.bn(0,"name"),q),A.co(s.bn(0,"minLife"),q),A.co(
 UF(a){var s=a.gpG(a),r=A.ai(s).j("an<1,dE*>")
 return A.ar(new A.an(s,new A.VG(),r),!0,r.j("b2.E"))}}
 A.VI.prototype={
-$1(a){return A.ao(["isLesion",a.a,"isIncon",a.b,"isDying",a.c,"isDisturbed",a.d,"isInsane",a.e],t.bD,t.yq)},
+$1(a){return A.ao(["isLesion",a.a,"isIncon",a.b,"isDying",a.c,"isDisturbed",a.d,"isInsane",a.e,"isScared",a.f===!0],t.bD,t.yq)},
 $S:449}
 A.VH.prototype={
 $1(a){var s=J.ag(a)
-return new A.ii(s.h(a,"isLesion"),s.h(a,"isIncon"),s.h(a,"isDying"),s.h(a,"isDisturbed"),s.h(a,"isInsane"))},
+return new A.ii(s.h(a,"isLesion"),s.h(a,"isIncon"),s.h(a,"isDying"),s.h(a,"isDisturbed"),s.h(a,"isInsane"),s.h(a,"isScared"))},
 $S:450}
 A.VG.prototype={
 $1(a){var s,r,q,p,o,n,m,l,k,j=a.b,i=j.bn(0,"uid"),h=a.a
@@ -73473,8 +73488,8 @@ n(A,"EJ","ax6",127)
 n(A,"EK","ax7",127)})();(function inheritance(){var s=hunkHelpers.mixin,r=hunkHelpers.mixinHard,q=hunkHelpers.inherit,p=hunkHelpers.inheritMany
 q(A.F,null)
 p(A.F,[A.F_,A.TY,A.ea,A.U9,A.vz,A.Ny,A.Qe,A.Vk,J.rh,A.aks,A.UX,A.aku,A.FP,A.FO,A.V2,A.GO,A.XV,A.r_,A.H7,A.Xt,A.Kf,A.oN,A.Qd,A.a4w,A.h7,A.G1,A.u1,A.a5D,A.Xe,A.c7,A.a7Y,A.Bz,A.dt,A.a84,A.a83,A.b8,A.bb,A.f7,A.a2K,A.Ve,A.MF,A.Vr,A.oZ,A.a23,A.rH,A.op,A.kM,A.a6N,A.a24,A.mf,A.a3i,A.dd,A.afp,A.a44,A.ahP,A.tl,A.a7Z,A.a1F,A.wA,A.Kz,A.A5,A.oT,A.mX,A.a2D,A.x9,A.Ab,A.xb,A.a_K,A.HK,A.kd,A.a_S,A.a15,A.UD,A.a9s,A.a2l,A.GI,A.GH,A.a2j,A.a2n,A.a2p,A.Ji,A.a2A,A.aat,A.RV,A.lh,A.pl,A.uJ,A.a2s,A.alu,A.Hl,A.Hk,A.all,A.Tz,A.fL,A.a5v,A.Kv,A.cQ,A.XL,A.a5k,A.a5g,A.wc,A.Cj,A.hg,A.a_v,A.a_x,A.a7L,A.a7O,A.a9J,A.JC,A.a82,A.FF,A.nC,A.a1Y,A.tk,A.UN,A.YR,A.Hf,A.a8O,A.rO,A.xH,A.a07,A.a7D,A.dN,A.Kb,A.a8P,A.wB,A.wC,A.wE,A.wD,A.AE,A.a8h,A.Lj,A.lI,A.cn,A.l5,A.NF,A.UC,A.Xw,A.AA,A.Xp,A.Ff,A.tx,A.qE,A.a_p,A.a8t,A.a8i,A.ZN,A.Xc,A.WO,A.c3,A.LN,A.YI,A.LT,A.al5,J.hN,A.L0,A.r,A.FI,A.aE,A.bR,A.a5x,A.fd,A.HA,A.qK,A.GD,A.He,A.tM,A.wP,A.LD,A.tn,A.ru,A.qo,A.a_u,A.a9g,A.IA,A.wG,A.Dt,A.aga,A.a08,A.xI,A.xu,A.Cm,A.Bg,A.tj,A.ah0,A.ab2,A.ip,A.NS,A.DO,A.DL,A.Mf,A.Mh,A.mP,A.DB,A.Fa,A.b7,A.hu,A.ht,A.u_,A.jM,A.am,A.Mg,A.eD,A.uT,A.Mi,A.LY,A.Nb,A.abK,A.Pb,A.ua,A.pk,A.QT,A.ahZ,A.BV,A.Eq,A.ps,A.adY,A.ux,A.xq,A.Ci,A.ob,A.V,A.Oz,A.DT,A.Ou,A.cR,A.RO,A.QN,A.QM,A.uS,A.nr,A.adQ,A.ahL,A.ahK,A.bV,A.cY,A.aU,A.IG,A.Am,A.BK,A.kh,A.Fo,A.bS,A.aB,A.QX,A.Ao,A.a4u,A.cd,A.DX,A.a9m,A.hB,A.wH,A.oS,A.Ls,A.Vo,A.akJ,A.up,A.cO,A.yt,A.Dk,A.R0,A.wQ,A.FY,A.abr,A.agm,A.RQ,A.ah1,A.a9L,A.km,A.Iy,A.adJ,A.afB,A.fJ,A.GF,A.ab3,A.Dv,A.lb,A.UU,A.IE,A.x,A.aK,A.js,A.ack,A.hb,A.M,A.xW,A.cu,A.Jf,A.LQ,A.lQ,A.kt,A.jm,A.yW,A.cA,A.ct,A.a5w,A.h6,A.AB,A.Li,A.jB,A.bf,A.cT,A.mh,A.EW,A.UJ,A.Hj,A.Aq,A.hR,A.Fh,A.Oi,A.C8,A.mQ,A.a2k,A.uu,A.nc,A.nB,A.nO,A.Zq,A.Jh,A.An,A.a5z,A.A4,A.mG,A.HD,A.ahE,A.Gg,A.xp,A.rp,A.uY,A.uz,A.rt,A.Ge,A.Ho,A.VA,A.K6,A.a4h,A.iC,A.LH,A.vc,A.q5,A.j3,A.fu,A.pd,A.a9t,A.aY,A.wN,A.ay,A.a5H,A.vs,A.yK,A.vq,A.vp,A.n7,A.lw,A.as,A.tG,A.Oe,A.a8R,A.O1,A.fe,A.Gf,A.Nd,A.QP,A.Bw,A.N6,A.Fw,A.MX,A.Rh,A.ys,A.N_,A.MY,A.eu,A.NJ,A.Fq,A.k2,A.aeE,A.ak,A.j_,A.ey,A.am5,A.he,A.I,A.a9I,A.zb,A.iv,A.cS,A.dl,A.Hh,A.un,A.Z9,A.agb,A.r2,A.k7,A.h3,A.h4,A.hY,A.Po,A.eH,A.LV,A.MG,A.MN,A.ML,A.MJ,A.MK,A.MI,A.MM,A.MP,A.MO,A.MH,A.nM,A.we,A.fF,A.uX,A.i2,A.rs,A.xT,A.rr,A.lm,A.am2,A.a2C,A.HP,A.MR,A.uV,A.a2w,A.a2z,A.hi,A.tp,A.mB,A.iE,A.tL,A.CK,A.jH,A.Km,A.a5I,A.Md,A.ld,A.OA,A.Mo,A.Mp,A.Mq,A.Mr,A.Mt,A.Ca,A.Op,A.Oo,A.ON,A.Mu,A.Mx,A.MA,A.Cf,A.MD,A.ME,A.N1,A.Ce,A.cl,A.Ne,A.Nh,A.No,A.aN,A.Nx,A.NA,A.abz,A.NH,A.YB,A.XZ,A.XY,A.YA,A.j7,A.rg,A.bI,A.H4,A.N4,A.afR,A.xm,A.O9,A.Ow,A.Gi,A.a3,A.f4,A.cC,A.y5,A.OS,A.Cd,A.OT,A.P8,A.y3,A.kG,A.Pa,A.PC,A.PE,A.PI,A.Cc,A.a4y,A.Kg,A.Vi,A.a1d,A.Qk,A.Cg,A.QB,A.QH,A.R1,A.Cb,A.R5,A.C9,A.Rb,A.AH,A.Rf,A.Ri,A.Rn,A.uq,A.NC,A.RS,A.Rp,A.Rq,A.AR,A.Rs,A.RL,A.fa,A.eP,A.Lb,A.yH,A.vH,A.H0,A.UZ,A.Gd,A.wa,A.cr,A.ZZ,A.Mv,A.Pc,A.xe,A.iU,A.O4,A.i5,A.eT,A.O2,A.O5,A.ra,A.EY,A.kk,A.QZ,A.jk,A.ab1,A.Ll,A.Rg,A.a7I,A.abg,A.afn,A.ahC,A.AS,A.rU,A.ck,A.C7,A.cH,A.VR,A.p3,A.adV,A.vv,A.F4,A.HL,A.xE,A.OO,A.Sj,A.a5j,A.Jc,A.aI,A.dK,A.a4,A.zg,A.ags,A.agt,A.oR,A.e2,A.zj,A.QC,A.a3U,A.a7s,A.a7t,A.a7q,A.i6,A.a4_,A.a3l,A.LP,A.oK,A.uk,A.e3,A.tC,A.l_,A.AL,A.a57,A.cE,A.Qm,A.l9,A.lk,A.a58,A.Qp,A.a5h,A.F8,A.vC,A.Uv,A.t6,A.nq,A.rm,A.Oj,A.Zy,A.xz,A.HJ,A.Ok,A.ky,A.mk,A.yg,A.a7V,A.a_w,A.a_y,A.KY,A.a16,A.yi,A.lx,A.kz,A.qJ,A.PJ,A.PK,A.a30,A.cD,A.d3,A.U6,A.mA,A.mC,A.kZ,A.OQ,A.ah8,A.tz,A.a8u,A.df,A.a8S,A.eh,A.a8v,A.Lk,A.Od,A.LX,A.LW,A.uH,A.tW,A.dj,A.Ix,A.q6,A.hs,A.Bb,A.Gr,A.Lv,A.DC,A.DQ,A.Ml,A.YM,A.NN,A.NL,A.ug,A.NR,A.u8,A.Nf,A.W7,A.Sq,A.Sp,A.O6,A.UF,A.yv,A.aeF,A.rd,A.nP,A.a5i,A.aco,A.lf,A.mc,A.h9,A.FH,A.fK,A.uI,A.Gm,A.y8,A.io,A.a4j,A.Lx,A.mV,A.Q7,A.Du,A.IK,A.a0E,A.a2m,A.il,A.a4i,A.HX,A.HY,A.Kl,A.a4R,A.ahY,A.kQ,A.NG,A.fs,A.LR,A.Kn,A.a4Y,A.Qx,A.S0,A.a7o,A.ir,A.kX,A.Lm,A.Ks,A.fn,A.dD,A.kv,A.l6,A.dE,A.ii,A.jY,A.cX,A.kw,A.VQ,A.G8,A.hV,A.jK,A.Hy,A.LA,A.I_,A.db,A.Vj,A.bt,A.a20,A.a06,A.iy,A.c4,A.a5K,A.Nc,A.jL,A.po,A.Ju,A.Jt,A.i7,A.aP,A.jr,A.cI,A.eG])
-p(A.ea,[A.FQ,A.FR,A.U3,A.U_,A.Ua,A.V6,A.V7,A.V4,A.V5,A.V3,A.YJ,A.YK,A.YL,A.a1G,A.ZK,A.ZL,A.ZI,A.ZJ,A.ajv,A.ai6,A.a_L,A.a_M,A.a04,A.aiy,A.aiz,A.aiA,A.aiB,A.aiC,A.aiD,A.aiE,A.aiF,A.a_O,A.a_P,A.a_Q,A.a_R,A.a_Y,A.a01,A.a1f,A.a5L,A.a5M,A.ZA,A.XI,A.XC,A.XD,A.XE,A.XF,A.XG,A.XH,A.Xy,A.XK,A.aau,A.ahQ,A.afs,A.afu,A.afv,A.afw,A.afx,A.afy,A.ahx,A.ahy,A.ahz,A.ahA,A.ahB,A.aex,A.aey,A.aez,A.aeA,A.aeB,A.a_i,A.a_j,A.a53,A.a54,A.aiN,A.aiO,A.aiP,A.aiQ,A.aiR,A.aiS,A.aiT,A.aiU,A.W3,A.a10,A.a8f,A.a8m,A.a8n,A.a8o,A.YS,A.YT,A.afA,A.Xs,A.Xq,A.Xr,A.VZ,A.W_,A.W0,A.W1,A.ZT,A.ZU,A.ZR,A.TS,A.Yt,A.Yu,A.ZO,A.ajm,A.UP,A.Vh,A.Z8,A.xn,A.La,A.a_E,A.a_D,A.ajs,A.aju,A.aad,A.aac,A.aic,A.aib,A.ah4,A.ah6,A.ah5,A.Z6,A.ac9,A.ach,A.a7T,A.agh,A.acm,A.abq,A.adX,A.a0o,A.a7F,A.a7H,A.adM,A.aip,A.aiq,A.Xf,A.XQ,A.ZM,A.abP,A.a1E,A.a1D,A.agN,A.agO,A.ah7,A.aii,A.Y7,A.Y8,A.Y9,A.a_F,A.aim,A.ain,A.aj2,A.aj3,A.aj4,A.ajP,A.ajQ,A.a_J,A.ajV,A.adL,A.adO,A.adN,A.ab9,A.a2B,A.a0F,A.a0H,A.a0R,A.Wt,A.ajo,A.Wv,A.Ww,A.a2R,A.a2S,A.a2N,A.a2O,A.ajg,A.ajF,A.a2P,A.ajc,A.ajd,A.VB,A.VD,A.Yh,A.Yi,A.a0O,A.a0M,A.a0P,A.a0L,A.a0N,A.a9v,A.Yc,A.Yd,A.Ye,A.Yf,A.a9y,A.a9z,A.Uk,A.Ul,A.Uo,A.Up,A.Us,A.ajp,A.ajq,A.ajf,A.ajE,A.abh,A.abk,A.abl,A.abn,A.Vy,A.a1A,A.abp,A.YF,A.YG,A.YH,A.ajh,A.a7J,A.a85,A.aci,A.a2u,A.a2v,A.ae4,A.a0r,A.aaY,A.aaZ,A.ab_,A.aaD,A.aaE,A.aaF,A.aaQ,A.aaR,A.aaS,A.aaT,A.aaU,A.aaV,A.aaW,A.aaX,A.aaG,A.aaO,A.aaB,A.aaP,A.aaA,A.aaH,A.aaI,A.aaJ,A.aaK,A.aaL,A.aaM,A.aaN,A.ab5,A.ab4,A.ab6,A.W6,A.adB,A.afT,A.adG,A.ag_,A.ael,A.ae6,A.ae7,A.ae8,A.ae9,A.a0v,A.ai0,A.ai1,A.ai2,A.ai3,A.a1V,A.a4x,A.a4D,A.aee,A.aeb,A.aed,A.aec,A.aea,A.ahh,A.ahi,A.a8q,A.a8r,A.aaa,A.a8U,A.a93,A.a94,A.a95,A.a97,A.a98,A.abd,A.abe,A.V_,A.V0,A.ab0,A.a_9,A.a_4,A.U7,A.a_b,A.a_c,A.a_o,A.a_n,A.agA,A.agB,A.a48,A.UA,A.a3r,A.a3u,A.a3t,A.a19,A.a18,A.a3L,A.a3M,A.a3K,A.a3P,A.a3Q,A.a3V,A.a3X,A.a3Z,A.a3Y,A.a43,A.a41,A.a42,A.a40,A.a47,A.a46,A.a4G,A.a4F,A.a8W,A.a5n,A.a5l,A.agy,A.agx,A.agv,A.agw,A.aif,A.a5q,A.a5p,A.a59,A.a5c,A.a5a,A.a5d,A.a5b,A.a5e,A.a5f,A.UI,A.abw,A.Uu,A.a0V,A.XS,A.a31,A.a4d,A.a4e,A.a4c,A.Ya,A.a8k,A.a8w,A.a8K,A.a8J,A.a8L,A.aix,A.TH,A.TL,A.TI,A.TK,A.ac3,A.ac0,A.abZ,A.ac_,A.ac2,A.aa8,A.aa9,A.ahS,A.agV,A.aan,A.aas,A.a4g,A.ahW,A.ahU,A.Wn,A.Wo,A.X6,A.X9,A.WU,A.X7,A.X_,A.X0,A.X1,A.X2,A.WZ,A.WY,A.WP,A.X5,A.abM,A.agq,A.ahG,A.aj0,A.YN,A.ait,A.YP,A.YO,A.afH,A.Wa,A.Wb,A.Wd,A.We,A.W8,A.Wg,A.Wh,A.Wj,A.Wk,A.afE,A.afF,A.afC,A.a3e,A.YZ,A.adx,A.Xj,A.Xk,A.Xg,A.Xi,A.Xh,A.a2_,A.a3F,A.a1e,A.Zf,A.Zi,A.Zk,A.Zm,A.Zo,A.Zh,A.abA,A.abB,A.abC,A.abF,A.abG,A.abH,A.ZF,A.ZD,A.ZC,A.ZW,A.a_h,A.a_g,A.a_f,A.a9S,A.a9T,A.a9U,A.a9V,A.a9W,A.a9X,A.a9Y,A.a9Z,A.aa1,A.aa0,A.aa_,A.aa2,A.aa3,A.aa4,A.aa5,A.a_m,A.aiI,A.aiJ,A.aiK,A.ae1,A.ae2,A.a0B,A.a4l,A.a4k,A.a4o,A.a4q,A.a4m,A.a1y,A.agi,A.agl,A.a1w,A.a1q,A.a1s,A.a1u,A.a1O,A.ag6,A.ag4,A.ag5,A.ag3,A.a1U,A.agd,A.a9c,A.a9b,A.a0h,A.aev,A.aes,A.a4N,A.a4O,A.a4P,A.a4T,A.a4U,A.a4X,A.a5_,A.a51,A.a55,A.a36,A.a32,A.a33,A.a34,A.a38,A.a3a,A.a3b,A.a7y,A.a56,A.ahk,A.ahm,A.aho,A.ahq,A.a1l,A.a1m,A.a1n,A.aeL,A.aeJ,A.afM,A.afL,A.afO,A.afN,A.agH,A.agG,A.agJ,A.agI,A.ad3,A.ad2,A.ad0,A.acF,A.acG,A.acI,A.acJ,A.acK,A.ad_,A.acz,A.acA,A.adq,A.adp,A.ad6,A.ad5,A.ad8,A.ad7,A.acW,A.acP,A.acQ,A.add,A.adc,A.adg,A.ade,A.acT,A.acv,A.acw,A.VI,A.VH,A.VG,A.aeX,A.aeT,A.aeW,A.aeZ,A.af_,A.aff,A.af9,A.af8,A.afc,A.afd,A.afh,A.afi,A.afl,A.afm,A.VP,A.VJ,A.VN,A.VO,A.abs,A.abu,A.VY,A.TO,A.agP,A.aiY,A.aiX,A.a2J])
-p(A.FQ,[A.U2,A.Ub,A.a28,A.a80,A.a81,A.ajw,A.ajy,A.ai7,A.a_N,A.a03,A.a_Z,A.a0_,A.a00,A.a_U,A.a_V,A.a_W,A.ZB,A.XJ,A.XB,A.Xz,A.ajA,A.ajB,A.a2o,A.aft,A.a2t,A.TA,A.TB,A.a52,A.XM,A.XO,A.XN,A.a11,A.a8p,A.afz,A.ZS,A.Ys,A.a8j,A.Xu,A.Xv,A.UR,A.ajN,A.a2G,A.aae,A.aaf,A.ahs,A.ahr,A.aia,A.aah,A.aai,A.aak,A.aal,A.aaj,A.aag,A.Z4,A.Z3,A.ac5,A.acd,A.acb,A.ac7,A.acc,A.ac6,A.acg,A.acf,A.ace,A.a7U,A.agZ,A.agY,A.a9O,A.aaz,A.aay,A.afq,A.aiV,A.agg,A.a9B,A.a9A,A.XP,A.UV,A.UW,A.ajX,A.ajY,A.a_I,A.a0J,A.a0K,A.a0T,A.a0U,A.Ws,A.Wr,A.Wu,A.Wx,A.Wy,A.a2T,A.a2U,A.a2Q,A.Yg,A.a0Q,A.Um,A.Un,A.Uq,A.Ur,A.Vv,A.Vw,A.abo,A.aiZ,A.aie,A.YE,A.Uw,A.UT,A.Zb,A.Za,A.Zc,A.Zd,A.YW,A.YU,A.YV,A.a0l,A.a0k,A.a0j,A.WF,A.WJ,A.WK,A.WG,A.WH,A.WI,A.a2y,A.a2E,A.a8a,A.a8b,A.a8c,A.a8d,A.TX,A.aab,A.a0q,A.Ut,A.aaC,A.WM,A.aiv,A.aiu,A.adC,A.adz,A.adA,A.acn,A.adH,A.adF,A.a0t,A.a0u,A.abR,A.a4z,A.a4B,A.a4A,A.aek,A.aej,A.aei,A.aeg,A.aeh,A.aef,A.ah9,A.ahb,A.aha,A.ahd,A.ahe,A.ahc,A.a8V,A.a90,A.a91,A.a8Z,A.a9_,A.a96,A.a_0,A.a__,A.adZ,A.a_6,A.a_7,A.a1g,A.a3n,A.a3p,A.a3o,A.a3q,A.a1c,A.a1b,A.a1a,A.a1X,A.a1W,A.a3J,A.a3N,A.a3O,A.a3W,A.a4I,A.a4J,A.a4K,A.a5y,A.XT,A.XU,A.a3_,A.a4a,A.a4b,A.a49,A.a87,A.a8M,A.a9N,A.ac1,A.abX,A.abY,A.abW,A.aa7,A.ahT,A.agU,A.agS,A.agW,A.agT,A.aar,A.aap,A.aaq,A.aao,A.ahV,A.a9G,A.a3H,A.a3I,A.WQ,A.WR,A.WT,A.X8,A.Xa,A.Xb,A.WV,A.WW,A.WX,A.X3,A.aj_,A.abS,A.abT,A.abU,A.abV,A.Z_,A.YY,A.YX,A.UG,A.Vb,A.Vc,A.Ze,A.Zg,A.Zj,A.Zl,A.Zn,A.Zp,A.abE,A.abD,A.acs,A.acr,A.acq,A.adu,A.adv,A.adw,A.TU,A.adS,A.adT,A.adU,A.ae0,A.aem,A.aeo,A.aen,A.a12,A.a4p,A.a4r,A.a4n,A.agk,A.agj,A.a1r,A.a1t,A.a1v,A.a1p,A.ag0,A.afo,A.a1S,A.a1R,A.a1T,A.a1Q,A.a1P,A.acj,A.agc,A.a4f,A.a9d,A.a9e,A.aeq,A.a14,A.a13,A.a4M,A.a4S,A.a4Z,A.a50,A.a39,A.a35,A.a37,A.a5F,A.a7w,A.a7x,A.a7v,A.a7z,A.ahj,A.ahl,A.ahn,A.ahp,A.aa6,A.agR,A.agQ,A.aeM,A.aeI,A.aeH,A.aeK,A.aeG,A.aeN,A.a9Q,A.a9P,A.aam,A.afK,A.afJ,A.afP,A.afI,A.afQ,A.agF,A.agE,A.agK,A.agD,A.agL,A.agC,A.agM,A.ad1,A.ad4,A.adf,A.adk,A.adl,A.acE,A.acL,A.adm,A.adn,A.ado,A.acy,A.acB,A.acC,A.acD,A.acZ,A.acY,A.acX,A.ad9,A.ada,A.adb,A.acO,A.acR,A.acS,A.acx,A.acV,A.acU,A.adh,A.adi,A.adj,A.acu,A.acH,A.acM,A.acN,A.af0,A.aeR,A.aeQ,A.aeS,A.aeP,A.af1,A.aeU,A.afj,A.af7,A.afa,A.af6,A.afb,A.af5,A.af4,A.ae_,A.ady,A.ajK,A.ajJ])
+p(A.ea,[A.FQ,A.FR,A.U3,A.U_,A.Ua,A.V6,A.V7,A.V4,A.V5,A.V3,A.YJ,A.YK,A.YL,A.a1G,A.ZK,A.ZL,A.ZI,A.ZJ,A.ajv,A.ai6,A.a_L,A.a_M,A.a04,A.aiy,A.aiz,A.aiA,A.aiB,A.aiC,A.aiD,A.aiE,A.aiF,A.a_O,A.a_P,A.a_Q,A.a_R,A.a_Y,A.a01,A.a1f,A.a5L,A.a5M,A.ZA,A.XI,A.XC,A.XD,A.XE,A.XF,A.XG,A.XH,A.Xy,A.XK,A.aau,A.ahQ,A.afs,A.afu,A.afv,A.afw,A.afx,A.afy,A.ahx,A.ahy,A.ahz,A.ahA,A.ahB,A.aex,A.aey,A.aez,A.aeA,A.aeB,A.a_i,A.a_j,A.a53,A.a54,A.aiN,A.aiO,A.aiP,A.aiQ,A.aiR,A.aiS,A.aiT,A.aiU,A.W3,A.a10,A.a8f,A.a8m,A.a8n,A.a8o,A.YS,A.YT,A.afA,A.Xs,A.Xq,A.Xr,A.VZ,A.W_,A.W0,A.W1,A.ZT,A.ZU,A.ZR,A.TS,A.Yt,A.Yu,A.ZO,A.ajm,A.UP,A.Vh,A.Z8,A.xn,A.La,A.a_E,A.a_D,A.ajs,A.aju,A.aad,A.aac,A.aic,A.aib,A.ah4,A.ah6,A.ah5,A.Z6,A.ac9,A.ach,A.a7T,A.agh,A.acm,A.abq,A.adX,A.a0o,A.a7F,A.a7H,A.adM,A.aip,A.aiq,A.Xf,A.XQ,A.ZM,A.abP,A.a1E,A.a1D,A.agN,A.agO,A.ah7,A.aii,A.Y7,A.Y8,A.Y9,A.a_F,A.aim,A.ain,A.aj2,A.aj3,A.aj4,A.ajP,A.ajQ,A.a_J,A.ajV,A.adL,A.adO,A.adN,A.ab9,A.a2B,A.a0F,A.a0H,A.a0R,A.Wt,A.ajo,A.Wv,A.Ww,A.a2R,A.a2S,A.a2N,A.a2O,A.ajg,A.ajF,A.a2P,A.ajc,A.ajd,A.VB,A.VD,A.Yh,A.Yi,A.a0O,A.a0M,A.a0P,A.a0L,A.a0N,A.a9v,A.Yc,A.Yd,A.Ye,A.Yf,A.a9y,A.a9z,A.Uk,A.Ul,A.Uo,A.Up,A.Us,A.ajp,A.ajq,A.ajf,A.ajE,A.abh,A.abk,A.abl,A.abn,A.Vy,A.a1A,A.abp,A.YF,A.YG,A.YH,A.ajh,A.a7J,A.a85,A.aci,A.a2u,A.a2v,A.ae4,A.a0r,A.aaY,A.aaZ,A.ab_,A.aaD,A.aaE,A.aaF,A.aaQ,A.aaR,A.aaS,A.aaT,A.aaU,A.aaV,A.aaW,A.aaX,A.aaG,A.aaO,A.aaB,A.aaP,A.aaA,A.aaH,A.aaI,A.aaJ,A.aaK,A.aaL,A.aaM,A.aaN,A.ab5,A.ab4,A.ab6,A.W6,A.adB,A.afT,A.adG,A.ag_,A.ael,A.ae6,A.ae7,A.ae8,A.ae9,A.a0v,A.ai0,A.ai1,A.ai2,A.ai3,A.a1V,A.a4x,A.a4D,A.aee,A.aeb,A.aed,A.aec,A.aea,A.ahh,A.ahi,A.a8q,A.a8r,A.aaa,A.a8U,A.a93,A.a94,A.a95,A.a97,A.a98,A.abd,A.abe,A.V_,A.V0,A.ab0,A.a_9,A.a_4,A.U7,A.a_b,A.a_c,A.a_o,A.a_n,A.agA,A.agB,A.a48,A.UA,A.a3r,A.a3u,A.a3t,A.a19,A.a18,A.a3L,A.a3M,A.a3K,A.a3P,A.a3Q,A.a3V,A.a3X,A.a3Z,A.a3Y,A.a43,A.a41,A.a42,A.a40,A.a47,A.a46,A.a4G,A.a4F,A.a8W,A.a5n,A.a5l,A.agy,A.agx,A.agv,A.agw,A.aif,A.a5q,A.a5p,A.a59,A.a5c,A.a5a,A.a5d,A.a5b,A.a5e,A.a5f,A.UI,A.abw,A.Uu,A.a0V,A.XS,A.a31,A.a4d,A.a4e,A.a4c,A.Ya,A.a8k,A.a8w,A.a8K,A.a8J,A.a8L,A.aix,A.TH,A.TL,A.TI,A.TK,A.ac3,A.ac0,A.abZ,A.ac_,A.ac2,A.aa8,A.aa9,A.ahS,A.agV,A.aan,A.aas,A.a4g,A.ahW,A.ahU,A.Wn,A.Wo,A.X6,A.X9,A.WU,A.X7,A.X_,A.X0,A.X1,A.X2,A.WZ,A.WY,A.WP,A.X5,A.abM,A.agq,A.ahG,A.aj0,A.YN,A.ait,A.YP,A.YO,A.afH,A.Wa,A.Wb,A.Wd,A.We,A.W8,A.Wg,A.Wh,A.Wj,A.Wk,A.afE,A.afF,A.afC,A.a3e,A.YZ,A.adx,A.Xj,A.Xk,A.Xg,A.Xi,A.Xh,A.a2_,A.a3F,A.a1e,A.Zf,A.Zi,A.Zk,A.Zm,A.Zo,A.Zh,A.abA,A.abB,A.abC,A.abF,A.abG,A.abH,A.ZF,A.ZD,A.ZC,A.ZW,A.a_h,A.a_g,A.a_f,A.a9S,A.a9T,A.a9U,A.a9V,A.a9W,A.a9X,A.a9Y,A.a9Z,A.aa1,A.aa0,A.aa_,A.aa2,A.aa3,A.aa4,A.aa5,A.a_m,A.aiI,A.aiJ,A.aiK,A.ae1,A.ae2,A.a0B,A.a4l,A.a4k,A.a4o,A.a4q,A.a4m,A.a1y,A.agi,A.agl,A.a1w,A.a1q,A.a1s,A.a1u,A.a1O,A.ag6,A.ag4,A.ag5,A.ag3,A.a1U,A.agd,A.a9c,A.a9b,A.a0h,A.aev,A.aes,A.a4N,A.a4O,A.a4P,A.a4T,A.a4U,A.a4X,A.a5_,A.a51,A.a55,A.a36,A.a32,A.a33,A.a34,A.a38,A.a3a,A.a3b,A.a7y,A.a56,A.ahk,A.ahm,A.aho,A.ahq,A.a1l,A.a1m,A.a1n,A.aeL,A.aeJ,A.afM,A.afL,A.afO,A.afN,A.agH,A.agG,A.agJ,A.agI,A.ad3,A.ad2,A.ad0,A.acF,A.acG,A.acI,A.acJ,A.acK,A.ad_,A.acz,A.acA,A.adq,A.adp,A.fvA,A.ad6,A.ad5,A.ad8,A.ad7,A.acW,A.acP,A.acQ,A.add,A.adc,A.adg,A.ade,A.acT,A.acv,A.acw,A.VI,A.VH,A.VG,A.aeX,A.aeT,A.aeW,A.aeZ,A.af_,A.aff,A.af9,A.af8,A.afc,A.afd,A.afh,A.afi,A.afl,A.afm,A.VP,A.VJ,A.VN,A.VO,A.abs,A.abu,A.VY,A.TO,A.agP,A.aiY,A.aiX,A.a2J])
+p(A.FQ,[A.U2,A.Ub,A.a28,A.a80,A.a81,A.ajw,A.ajy,A.ai7,A.a_N,A.a03,A.a_Z,A.a0_,A.a00,A.a_U,A.a_V,A.a_W,A.ZB,A.XJ,A.XB,A.Xz,A.ajA,A.ajB,A.a2o,A.aft,A.a2t,A.TA,A.TB,A.a52,A.XM,A.XO,A.XN,A.a11,A.a8p,A.afz,A.ZS,A.Ys,A.a8j,A.Xu,A.Xv,A.UR,A.ajN,A.a2G,A.aae,A.aaf,A.ahs,A.ahr,A.aia,A.aah,A.aai,A.aak,A.aal,A.aaj,A.aag,A.Z4,A.Z3,A.ac5,A.acd,A.acb,A.ac7,A.acc,A.ac6,A.acg,A.acf,A.ace,A.a7U,A.agZ,A.agY,A.a9O,A.aaz,A.aay,A.afq,A.aiV,A.agg,A.a9B,A.a9A,A.XP,A.UV,A.UW,A.ajX,A.ajY,A.a_I,A.a0J,A.a0K,A.a0T,A.a0U,A.Ws,A.Wr,A.Wu,A.Wx,A.Wy,A.a2T,A.a2U,A.a2Q,A.Yg,A.a0Q,A.Um,A.Un,A.Uq,A.Ur,A.Vv,A.Vw,A.abo,A.aiZ,A.aie,A.YE,A.Uw,A.UT,A.Zb,A.Za,A.Zc,A.Zd,A.YW,A.YU,A.YV,A.a0l,A.a0k,A.a0j,A.WF,A.WJ,A.WK,A.WG,A.WH,A.WI,A.a2y,A.a2E,A.a8a,A.a8b,A.a8c,A.a8d,A.TX,A.aab,A.a0q,A.Ut,A.aaC,A.WM,A.aiv,A.aiu,A.adC,A.adz,A.adA,A.acn,A.adH,A.adF,A.a0t,A.a0u,A.abR,A.a4z,A.a4B,A.a4A,A.aek,A.aej,A.aei,A.aeg,A.aeh,A.aef,A.ah9,A.ahb,A.aha,A.ahd,A.ahe,A.ahc,A.a8V,A.a90,A.a91,A.a8Z,A.a9_,A.a96,A.a_0,A.a__,A.adZ,A.a_6,A.a_7,A.a1g,A.a3n,A.a3p,A.a3o,A.a3q,A.a1c,A.a1b,A.a1a,A.a1X,A.a1W,A.a3J,A.a3N,A.a3O,A.a3W,A.a4I,A.a4J,A.a4K,A.a5y,A.XT,A.XU,A.a3_,A.a4a,A.a4b,A.a49,A.a87,A.a8M,A.a9N,A.ac1,A.abX,A.abY,A.abW,A.aa7,A.ahT,A.agU,A.agS,A.agW,A.agT,A.aar,A.aap,A.aaq,A.aao,A.ahV,A.a9G,A.a3H,A.a3I,A.WQ,A.WR,A.WT,A.X8,A.Xa,A.Xb,A.WV,A.WW,A.WX,A.X3,A.aj_,A.abS,A.abT,A.abU,A.abV,A.Z_,A.YY,A.YX,A.UG,A.Vb,A.Vc,A.Ze,A.Zg,A.Zj,A.Zl,A.Zn,A.Zp,A.abE,A.abD,A.acs,A.acr,A.acq,A.adu,A.adv,A.adw,A.TU,A.adS,A.adT,A.adU,A.ae0,A.aem,A.aeo,A.aen,A.a12,A.a4p,A.a4r,A.a4n,A.agk,A.agj,A.a1r,A.a1t,A.a1v,A.a1p,A.ag0,A.afo,A.a1S,A.a1R,A.a1T,A.a1Q,A.a1P,A.acj,A.agc,A.a4f,A.a9d,A.a9e,A.aeq,A.a14,A.a13,A.a4M,A.a4S,A.a4Z,A.a50,A.a39,A.a35,A.a37,A.a5F,A.a7w,A.a7x,A.a7v,A.a7z,A.ahj,A.ahl,A.ahn,A.ahp,A.aa6,A.agR,A.agQ,A.aeM,A.aeI,A.aeH,A.aeK,A.aeG,A.aeN,A.a9Q,A.a9P,A.aam,A.afK,A.afJ,A.afP,A.afI,A.afQ,A.agF,A.agE,A.agK,A.agD,A.agL,A.agC,A.agM,A.ad1,A.ad4,A.adf,A.adk,A.adl,A.acE,A.acL,A.adm,A.adn,A.ado,A.acy,A.acB,A.acC,A.acD,A.acZ,A.fvB,A.acY,A.acX,A.ad9,A.ada,A.adb,A.acO,A.acR,A.acS,A.acx,A.acV,A.acU,A.adh,A.adi,A.adj,A.acu,A.acH,A.acM,A.acN,A.af0,A.aeR,A.aeQ,A.aeS,A.aeP,A.af1,A.aeU,A.afj,A.af7,A.afa,A.af6,A.afb,A.af5,A.af4,A.ae_,A.ady,A.ajK,A.ajJ])
 p(A.FR,[A.U1,A.U0,A.TZ,A.aj8,A.a27,A.ajx,A.a_X,A.a_T,A.XA,A.a7N,A.ajR,A.ZP,A.UQ,A.US,A.Vg,A.a2F,A.a_C,A.ajt,A.aid,A.aj1,A.Z7,A.aca,A.agf,A.acl,A.a09,A.a0n,A.a7G,A.adR,A.a1B,A.a9n,A.a9o,A.a9p,A.ahJ,A.ahI,A.aio,A.a0W,A.a0X,A.a0Y,A.a0Z,A.a1k,A.a4s,A.a4t,A.a7Q,A.a7R,A.ahN,A.ah2,A.ah3,A.a9M,A.aj9,A.Ue,A.Uf,A.abb,A.aba,A.a0I,A.a0S,A.WA,A.Wz,A.VV,A.Xo,A.VC,A.ajG,A.Vt,A.a2x,A.a0p,A.ae5,A.afW,A.afX,A.afV,A.afU,A.afS,A.afZ,A.ai_,A.aav,A.a4C,A.ago,A.ahf,A.ahg,A.ai5,A.a8T,A.a1z,A.abc,A.a_1,A.a_8,A.a_5,A.U8,A.a1h,A.a1i,A.a3m,A.a3v,A.a3w,A.a3s,A.a3B,A.a3z,A.a3A,A.a3y,A.a17,A.a2f,A.a2e,A.a2g,A.a2h,A.a3R,A.a3S,A.a45,A.a3x,A.a3D,A.a3C,A.a3T,A.a4H,A.agu,A.a5r,A.a5s,A.abx,A.a7M,A.agX,A.WS,A.X4,A.Wf,A.W9,A.Wc,A.Wi,A.Wl,A.afG,A.afD,A.a3c,A.a3d,A.ac4,A.a3G,A.ZE,A.acp,A.act,A.aeD,A.ag7,A.ah_,A.ai4,A.aeu,A.aet,A.aer,A.a4W,A.agr,A.a5G,A.a5J,A.ag2,A.ag1,A.aeO,A.a9R,A.adt,A.ads,A.adr,A.aeV,A.aeY,A.af2,A.af3,A.afe,A.afg,A.afk,A.VK,A.VL,A.VM,A.abt,A.ahO])
 p(A.Ny,[A.iW,A.ic,A.mi,A.lG,A.tV,A.hl,A.EX,A.lS,A.qG,A.bl,A.o8,A.tZ,A.cV,A.p2,A.tF,A.vY,A.yL,A.rl,A.L2,A.L3,A.yI,A.ly,A.np,A.Fs,A.GV,A.n8,A.jl,A.ih,A.rJ,A.Jd,A.jA,A.tt,A.Le,A.kY,A.Ax,A.vN,A.Fy,A.AM,A.vP,A.qP,A.k6,A.KT,A.fZ,A.pi,A.vo,A.DN,A.qx,A.j0,A.dC,A.x3,A.mN,A.ub,A.ws,A.r3,A.Lq,A.pm,A.FB,A.Fz,A.Gy,A.ue,A.pt,A.qZ,A.dT,A.xN,A.hz,A.kx,A.cj,A.f5,A.td,A.m6,A.AW,A.Kj,A.rS,A.vE,A.B6,A.nb,A.vI,A.vO,A.nj,A.nX,A.tA,A.AJ,A.tf,A.px,A.wS,A.xU,A.ku,A.lE,A.r5,A.wb,A.x4,A.Al,A.FD,A.rZ,A.mr,A.Ga,A.xy,A.m4,A.fi,A.At,A.y7,A.Af,A.Ag,A.eE,A.Ld,A.qY,A.fM,A.ns,A.kn,A.B2,A.ke,A.H8,A.p8,A.Fg,A.QO,A.pp,A.nS,A.Iu,A.uW,A.oL,A.eJ,A.uP,A.yD,A.pq,A.pE,A.vg,A.t_,A.zY,A.zT,A.t1,A.tB,A.qI])
 q(A.UO,A.Qe)
