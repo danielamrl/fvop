@@ -69556,7 +69556,7 @@ e=A.cq(A.c([A.ZY("lib/assets/images/ORDEM LOGO.png",125),A.b0(c5,20,c5)/* TITULO
 a2=A.b0(c5,20,c5)
 a3=A.vG(360)
 a4=A.bQ(0,0,700,0,0)
-a4=A.j4(A.aX(c5,A.bq(A.c([A.dz(!1,a3,!0,A.AU(new A.xg(s.b,s.a,c5),"Clique para inserir uma foto 1:1 (Ex: 600 x 600, 1000 x 1000 e etc) Utilize links direto de uma nuvem, exemplo links de imagem do Discord (Recomendando)",a4),c5,!0,c5,c5,B.X,c5,c5,c5,c5,c5,c5,new A.adl(s,c8,j,c7),c5,c5,c5),A.b0(c5,c5,30),/* LISTA DE CHECKBOXES AO LADO DA FOTO */A.cq(A.c([
+a4=A.j4(A.aX(c5,A.bq(A.c([A.dz(!1,a3,!0,A.AU(new A.xg(s.b,s.a,c5),"Clique para inserir uma foto 1:1 (Ex: 600 x 600, 1000 x 1000 e etc) Utilize links direto de uma nuvem, exemplo links de imagem do Discord (Recomendando)",a4),c5,!0,c5,c5,B.X,c5,c5,c5,c5,c5,c5,new A.adl(s,c8,j,c7),c5,c5,c5),A.b0(c5,c5,30),/* LISTA DE CHECKBOXES AO LADO DA FOTO (2 colunas alinhadas pelo topo) */A.bq(A.c([A.cq(A.c([
 A.bq(A.c([A.qf(A.U(255,0,0,0),A.U(255,255,255,255),new A.adp(k),new A.jN(new A.adq(),B.l,1,B.m),0,k.r),A.aw("Machucado",c5,c5,c5,A.X(c5,c5,B.e,c5,c5,c5,c5,c5,c6,c5,c5,16.666666666666668,c5,c5,c5,c5,!0,c5,c5,c5,c5,c5,A.c([],t.A6),c5,c5),c5,c5)],c),B.p,B.u,B.bp),
 A.bq(A.c([A.qf(A.U(255,0,0,0),A.U(255,255,255,255),new A.adc(k),new A.jN(new A.add(),B.l,1,B.m),0,k.y),A.aw("Sangrando",c5,c5,c5,A.X(c5,c5,B.e,c5,c5,c5,c5,c5,c6,c5,c5,16.666666666666668,c5,c5,c5,c5,!0,c5,c5,c5,c5,c5,A.c([],t.A6),c5,c5),c5,c5)],c),B.p,B.u,B.bp),
 A.bq(A.c([A.qf(A.U(255,0,0,0),A.U(255,255,255,255),new A.ad5(k),new A.jN(new A.ad6(),B.l,1,B.m),c5,k.x),A.aw("Inconsciente",c5,c5,c5,A.X(c5,c5,B.e,c5,c5,c5,c5,c5,c6,c5,c5,16.666666666666668,c5,c5,c5,c5,!0,c5,c5,c5,c5,c5,A.c([],t.A6),c5,c5),c5,c5)],c),B.p,B.u,B.bp),
@@ -69564,7 +69564,7 @@ A.bq(A.c([A.qf(A.U(255,0,0,0),A.U(255,255,255,255),new A.ade(k),new A.jN(new A.a
 A.bq(A.c([A.qf(A.U(255,0,0,0),A.U(255,255,255,255),new A.ad7(k),new A.jN(new A.ad8(),B.l,1,B.m),c5,k.w),A.aw("Morrendo",c5,c5,c5,A.X(c5,c5,B.e,c5,c5,c5,c5,c5,c6,c5,c5,16.666666666666668,c5,c5,c5,c5,!0,c5,c5,c5,c5,c5,A.c([],t.A6),c5,c5),c5,c5)],c),B.p,B.u,B.bp)
 ],c),B.fM,B.u,B.bp),/* SEGUNDA COLUNA DE CONDICOES */A.b0(c5,c5,20),A.cq(A.c([
 A.bq(A.c([A.qf(A.U(255,0,0,0),A.U(255,255,255,255),new A.fvA(k),new A.jN(new A.adq(),B.l,1,B.m),0,k.fvApavorado),A.aw("Apavorado",c5,c5,c5,A.X(c5,c5,B.e,c5,c5,c5,c5,c5,c6,c5,c5,16.666666666666668,c5,c5,c5,c5,!0,c5,c5,c5,c5,c5,A.c([],t.A6),c5,c5),c5,c5)],c),B.p,B.u,B.bp)
-],c),B.fM,B.u,B.bp),A.b0(c5,c5,40),A.b0(A.AU(new A.rB(!0,c5),"Rolagem de ataque: Insira o valor de seu atributo seguido do valor de sua p\xe9rica!",A.bQ(0,0,700,0,0)),c5,220)],c),B.p,B.u,B.r),B.n,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5),B.fx)
+],c),B.fM,B.u,B.bp)],c),B.fM/* topo */,B.u,B.bp),A.b0(c5,c5,40),A.b0(A.AU(new A.rB(!0,c5),"Rolagem de ataque: Insira o valor de seu atributo seguido do valor de sua p\xe9rica!",A.bQ(0,0,700,0,0)),c5,220)],c),B.p,B.u,B.r),B.n,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5),B.fx)
 a3=A.b0(c5,20,c5)
 a5=t.A6
 a6=A.qW(A.c([A.aw("Vida (PV)",c5,c5,c5,A.X(c5,c5,B.e,c5,c5,c5,c5,c5,c6,c5,c5,16.666666666666668,c5,c5,c5,c5,!0,c5,c5,c5,c5,c5,A.c([new A.es(0,B.dZ,B.hG,B.k,7)],a5),c5,c5),c5,c5),A.bq(A.c([A.lV(B.bT,c5,A.dL(B.h4,B.e,c5),16,new A.adm(s,j,c7),new A.aq(0,0,0,0),1,c5),A.lV(B.bT,c5,A.dL(B.ej,B.e,c5),16,new A.adn(s,j,c7),new A.aq(0,0,0,0),1,c5)],c),B.p,B.u,B.r)],c),B.p,B.a5,c5,B.au,B.r,c5,c5,B.aU)
@@ -71103,7 +71103,7 @@ return n},
 Xj(a){var s,r,q,p,o,n=A.c([],t.yv)
 for(s=J.va(a.a)+2,r=a.b,q=this.b*360,p=this.c,o=-2;o<=s;++o)n.push(new A.l(o,Math.sin(B.f.ah(q-o,360)*0.017453292519943295)*(r/20)+(r-r*p)))
 return n},
-ro(a){return this.b!==a.b}}
+ro(a){return this.b!==a.b||this.c!==a.c||this.d!==a.d}/* original: this.b!==a.b (so recortava com a onda animando; com a onda desativada a barra nao descia) */}
 A.Ev.prototype={
 m(a){var s=this,r=s.bj$
 if(r!=null)r.H(0,s.gfY())
